@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7382ddc9-c98f-4358-a968-e1454721911c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
+    <list default="true" id="7382ddc9-c98f-4358-a968-e1454721911c" name="Default" comment="refactor code">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/sass/_media.sass" afterPath="$PROJECT_DIR$/app/sass/_media.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/sass/_vars.sass" afterPath="$PROJECT_DIR$/app/sass/_vars.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/sass/main.sass" afterPath="$PROJECT_DIR$/app/sass/main.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,8 +23,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
-              <caret line="38" column="18" lean-forward="true" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+            <state relative-caret-position="719">
+              <caret line="68" column="7" lean-forward="true" selection-start-line="68" selection-start-column="7" selection-end-line="68" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -291,7 +285,7 @@
       <workItem from="1493830618028" duration="761000" />
       <workItem from="1493832474755" duration="1087000" />
       <workItem from="1493834468375" duration="1935000" />
-      <workItem from="1493836481841" duration="16245000" />
+      <workItem from="1493836481841" duration="16420000" />
     </task>
     <task id="LOCAL-00001" summary="add image camera">
       <created>1493853120449</created>
@@ -307,11 +301,39 @@
       <option name="project" value="LOCAL" />
       <updated>1493853196200</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="refactor code">
+      <created>1493853246102</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1493853246102</updated>
+    </task>
+    <task id="LOCAL-00004" summary="index: feature">
+      <created>1493853313717</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1493853313717</updated>
+    </task>
+    <task id="LOCAL-00005" summary="refactor code">
+      <created>1493853332180</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1493853332180</updated>
+    </task>
+    <task id="LOCAL-00006" summary="template: refactor code">
+      <created>1493853378821</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1493853378821</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20028000" />
+    <option name="totallyTimeSpent" value="20203000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -355,7 +377,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add image camera" />
     <MESSAGE value="scripts: chore code" />
-    <option name="LAST_COMMIT_MESSAGE" value="scripts: chore code" />
+    <MESSAGE value="index: feature" />
+    <MESSAGE value="refactor code" />
+    <MESSAGE value="template: refactor code" />
+    <option name="LAST_COMMIT_MESSAGE" value="template: refactor code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -427,8 +452,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="38" column="18" lean-forward="true" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+        <state relative-caret-position="719">
+          <caret line="68" column="7" lean-forward="true" selection-start-line="68" selection-start-column="7" selection-end-line="68" selection-end-column="7" />
           <folding />
         </state>
       </provider>
