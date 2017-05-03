@@ -2,29 +2,49 @@
 @import "fonts"
 @import "libs"
 @import "vars"
+@import "fontello"
+@import "jquery-labelauty"
+@import "chosen"
+@import "jquery-multiselect"
+@import "jquery-ui"
+
+*
+	box-sizing: border-box
 
 *::-webkit-input-placeholder
-	color: #666
-	opacity: 1
+    color: $input_color
+
+*:focus::-webkit-input-placeholder
+	opacity: 0
+	transition: opacity .3s ease
 
 *:-moz-placeholder
-	color: #666
-	opacity: 1
+    color: $input_color
+
+*:focus:-moz-placeholder
+	opacity: 0
+	transition: opacity .3s ease
 
 *::-moz-placeholder
-	color: #666
-	opacity: 1
+    color: $input_color
+
+*:focus::-moz-placeholder
+	opacity: 0
+	transition: opacity .3s ease
 
 *:-ms-input-placeholder
-	color: #666
-	opacity: 1
+    color: $input_color
+
+*:focus:-ms-input-placeholder
+	opacity: 0
+	transition: opacity .3s ease
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
-	color: #666
+	color: $input_color
 body input:required:valid,
 body textarea:required:valid
-	color: #666
+	color: $input_color
 
 html, body
 	height: 100%
@@ -33,13 +53,247 @@ body
 	font-size: 16px
 	min-width: 320px
 	position: relative
-	line-height: 1.75
-	font-family: $default-font
+	line-height: 1
+	font-family: $helvetica_light
 	overflow-x: hidden
+	min-height: 100vh
+	height: auto
+
+h1, h2, h3, h4, h5, h6
+	padding: 0
+	margin: 0
+
+p
+	padding: 0
+	margin: 0
+
+a
+	text-decoration: none
+	color: $link
+
+ul, li
+	padding: 0
+	margin: 0
+
+.p0
+	padding: 0 !important
+
+.m0
+	margin: 0 !important
 
 .img-responsive
 	display: block
 	max-width: 100%
 	height: auto
+
+
+
+
+// COMBOBOX STYLES
+.scombobox
+    position: relative
+    font-family: $helvetica_light
+.scombobox select
+    display: none
+.scombobox-display
+    color: rgba(0, 0, 0, .6)
+    width: 100%
+    height: 58px
+    padding: 18px 18px
+    font-size: 1.063em
+    border: 1px solid #b1b1b1
+    box-sizing: border-box
+.scombobox-display:focus
+    border: 1px solid #ff8e40 
+    outline: 0
+.scombobox-display:focus
+    border-bottom: 1px solid #b1b1b1 
+    outline: 0
+.scombobox-display:disabled
+    background: #f0f0f0
+.scombobox-display.scombobox-invalid
+	background: #ededed
+	color: #2b2b2b
+.scombobox-display-div
+    border: 1px solid #ccc
+    cursor: pointer
+.scombobox-display-div-holder
+    padding: 2px
+    margin-left: 5px
+.scombobox-display-div-item
+    border: 1px solid #ccc
+    margin: 2px
+    float: left
+    height: 40%
+    max-width: 200px
+    padding: 4px 18px 4px 8px
+    position: relative
+    vertical-align: middle
+    white-space: nowrap
+    overflow: hidden
+    cursor: default
+    background: #f8f8f8
+    display: none
+.scombobox-display-div-item-text
+    width: 200px
+    overflow: hidden
+.scombobox-display-div-item-remove
+    position: absolute
+    right: -1px
+    top: 5px
+    margin-right: 10px
+    background: #a0a0a0
+    border-radius: 100px
+    color: #fff
+    cursor: pointer
+    line-height: 87%
+    padding: 1px 3px 2px
+.scombobox-display-div-item-remove:hover
+    background: $button
+.scombobox-display-div-item-remove:active
+    background: $button
+.scombobox-list
+    color: rgba(0, 0, 0, .6)
+    display: none
+    position: absolute
+    max-height: 200px
+    min-width: 100%
+    max-width: 300%
+    white-space: nowrap
+    box-sizing: border-box
+    overflow-y: auto
+    background: #fff
+    border: none
+    box-shadow: 0 0 3px #ccc
+    z-index: 10
+.scombobox-list p
+    text-align: left
+    cursor: pointer
+    margin: 0
+    padding: 20px
+.scombobox-list p input[type="checkbox"]
+    margin-right: 18px
+    vertical-align: middle
+.scombobox-list p.scombobox-hovered,
+.scombobox-list p:hover
+    background-color: #f2f2f2
+.scombobox-list p.scombobox-separator
+    height: 2px
+    padding: 0
+    cursor: default
+    background: #eee
+.scombobox-list p.scombobox-header
+	cursor: default
+	background: #eee
+	font-size: 1.063em
+	font-family: $helvetica_bold
+	color: $button
+.scombobox-dropdown-arrow
+    position: absolute
+    top: 20px
+    right: 0
+    width: 20px
+    height: 20px
+    /* background size: 4 Kb */
+    background: url("../img/ui-icons_444444_256x240.png") -65px -16px
+    opacity: 0.5
+    z-index: 1
+    cursor: pointer
+.scombobox-dropdown-arrow:hover
+    opacity: 1
+.scombobox-dropdown-arrow-up
+    background: url("../img/ui-icons_444444_256x240.png") -65px -16px
+.scombobox-dropdown-background
+    position: absolute
+    top: 1px
+    right: 1px
+    width: 20px
+    height: 56px
+    background: #fff
+    // border: 2px solid #b1b1b1
+    border-left: none
+    box-sizing: border-box
+.scombobox-display:focus .scombobox-dropdown-background:focus
+    outline: 0
+    border: 1px solid #ff8e40
+    border-left: none
+.scombobox-dropdown-background-invalid
+    border-left: 1px solid #ccc
+.scombobox-marker
+    background: rgb(17, 147, 154)
+    color: white
+    border-radius: 2px
+    padding: 0 2px
+    margin: 0 2px
+.scombobox input[type="checkbox"]
+    cursor: pointer
+.scombobox-disabled .scombobox-dropdown-arrow,
+.scombobox-disabled .scombobox-dropdown-background
+    display: none
+.scombobox-disabled .scombobox-display-div
+    background: #f8f8f8
+    cursor: default
+// COMBOBOX STYLES END
+
+// FONTELLO ICON STYLES
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?21194324');
+  src: url('../font/fontello.eot?21194324#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff2?21194324') format('woff2'),
+       url('../font/fontello.woff?21194324') format('woff'),
+       url('../font/fontello.ttf?21194324') format('truetype'),
+       url('../font/fontello.svg?21194324#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?21194324#fontello') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-help:before { content: '\f128'; } /* '' */
+//FONTELLO ICONS STYLES END
 
 @import "media" // Всегда в конце

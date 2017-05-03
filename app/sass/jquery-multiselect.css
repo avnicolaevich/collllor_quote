@@ -1,0 +1,27 @@
+.ui-multiselect { padding:2px 0 2px 4px; text-align:left; width: 460px !important; }
+.ui-multiselect span.ui-icon { float:right }
+.ui-multiselect-single .ui-multiselect-checkboxes input { left:-9999px; position:absolute !important; top: auto !important; }
+.ui-multiselect-single .ui-multiselect-checkboxes label { padding:5px !important }
+
+.ui-multiselect-header { margin-bottom:3px; padding:3px 0 3px 4px; position: absolute; top: 3px; right: 30px; z-index: 9999; }
+.ui-multiselect-header ul { font-size:0.9em }
+.ui-multiselect-header ul li { float:left; padding:0 10px 0 0; }
+.ui-multiselect-header a { text-decoration:none; }
+.ui-multiselect-header a:hover { text-decoration:underline; }
+.ui-multiselect-header span.ui-icon { float:left; }
+.ui-multiselect-header .ui-multiselect-close { float:right; padding-right:0; text-align:right; }
+
+.ui-multiselect-menu { display:none; position:absolute; text-align: left; margin-top: -1px; height: auto !important; }
+.ui-multiselect-checkboxes { overflow-y:auto; position:relative; }
+.ui-multiselect-checkboxes label { border:1px solid transparent; cursor:default; display:block; padding:6px 18px; }
+.ui-multiselect-checkboxes label input { position:relative; top:1px; margin-right: 10px }
+.ui-multiselect-checkboxes label img { height: 30px; vertical-align: middle; padding-right: 3px;}
+.ui-multiselect-checkboxes li { clear:both; font-size:0.9em; list-style: none;}
+.ui-multiselect-checkboxes .ui-multiselect-optgroup { padding: 0; }
+.ui-multiselect-columns { display: inline-block; vertical-align: top; }
+.ui-multiselect-checkboxes .ui-multiselect-optgroup a { cursor: pointer; display:block; font-weight:bold; margin:1px 0; padding: 3px 3px 3px 18px; text-align:left; text-decoration:none; color: rgb(17, 147, 154); }
+.ui-multiselect-checkboxes label input:hover, .ui-multiselect-checkboxes label input:focus, .ui-multiselect-checkboxes label input:active { outline: none; }
+.ui-multiselect-none, .ui-multiselect-all { margin-left: 5px; }
+@media print{
+    .ui-multiselect-menu {display: none;}
+}

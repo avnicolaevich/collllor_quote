@@ -18,6 +18,11 @@ var gulp           = require('gulp'),
 gulp.task('scripts', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
+		'app/libs/jquery-labelauty/jquery-labelauty.js',
+		'app/libs/scombobox/jquery.scombobox.min.js',
+		'app/libs/chosen/chosen.jquery.js',
+		'app/libs/jquery-ui/jquery-ui.js',
+		'app/libs/multiselect/jquery-multiselect.js',
 		'app/js/common.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))
@@ -32,8 +37,8 @@ gulp.task('browser-sync', function() {
 			baseDir: 'app'
 		},
 		notify: false,
-		// tunnel: true,
-		// tunnel: "projectmane", //Demonstration page: http://projectmane.localtunnel.me
+		tunnel: true,
+		tunnel: "collllor_quote", //Demonstration page: http://projectmane.localtunnel.me
 	});
 });
 
