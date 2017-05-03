@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7382ddc9-c98f-4358-a968-e1454721911c" name="Default" comment="refactor code">
+    <list default="true" id="7382ddc9-c98f-4358-a968-e1454721911c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -285,7 +285,7 @@
       <workItem from="1493830618028" duration="761000" />
       <workItem from="1493832474755" duration="1087000" />
       <workItem from="1493834468375" duration="1935000" />
-      <workItem from="1493836481841" duration="16420000" />
+      <workItem from="1493836481841" duration="16430000" />
     </task>
     <task id="LOCAL-00001" summary="add image camera">
       <created>1493853120449</created>
@@ -329,11 +329,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493853378821</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="refactor code">
+      <created>1493853387259</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1493853387259</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20203000" />
+    <option name="totallyTimeSpent" value="20213000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -378,9 +385,9 @@
     <MESSAGE value="add image camera" />
     <MESSAGE value="scripts: chore code" />
     <MESSAGE value="index: feature" />
-    <MESSAGE value="refactor code" />
     <MESSAGE value="template: refactor code" />
-    <option name="LAST_COMMIT_MESSAGE" value="template: refactor code" />
+    <MESSAGE value="refactor code" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
