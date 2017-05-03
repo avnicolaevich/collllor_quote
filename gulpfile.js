@@ -1,4 +1,4 @@
-var gulp           = require('gulp'),
+var     gulp = require('gulp'),
 		gutil          = require('gulp-util' ),
 		sass           = require('gulp-sass'),
 		browserSync    = require('browser-sync'),
@@ -37,8 +37,8 @@ gulp.task('browser-sync', function() {
 			baseDir: 'app'
 		},
 		notify: false,
-		tunnel: true,
-		tunnel: "collllor_quote", //Demonstration page: http://projectmane.localtunnel.me
+		// tunnel: true,
+		// tunnel: "projectmane", //Demonstration page: http://projectmane.localtunnel.me
 	});
 });
 
