@@ -93,9 +93,6 @@ button
 .up
     margin-top: -1px
 
-.right-border
-    border-right: 1px solid #B1B1B1
-
 .img-responsive
 	display: block
 	max-width: 100%
@@ -557,13 +554,12 @@ button
 
 // SIGNIN STYLES
 .signin
-    margin-top: 100px
+    margin-top: 25vh
     padding-bottom: 35px
     &__content
-        max-width: 500px
+        max-width: 350px
         margin: auto
-        // border-right: 1px solid #B1B1B1
-    &__heading
+    &__heading-login, &__heading-create
         text-align: center
         font-size: 2.375em
         color: rgb(112, 110, 110)
@@ -582,9 +578,22 @@ button
             color: $font_color
             top: -25px
             left: 50px
-    
-
-
+            &::after
+                content: ''
+                position: absolute
+                top: -260px
+                right: -315.5px
+                border-right: 1px solid #B1B1B1
+                width: 1px
+                height: 464px
+    &__button
+        margin: auto
+        @include save_link
+    &__description
+        color: rgb(134, 137, 135)
+        font-size: 1.063em
+        line-height: 18px
+        padding-bottom: 15px
 
 // SIGNIN STYLES END
 
