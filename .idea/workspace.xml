@@ -4,7 +4,6 @@
     <list default="true" id="7382ddc9-c98f-4358-a968-e1454721911c" name="Default" comment="media: add responsive styles">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/scripts.min.js" afterPath="$PROJECT_DIR$/app/js/scripts.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/signin.html" afterPath="$PROJECT_DIR$/app/signin.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -285,7 +284,7 @@
       <workItem from="1493832474755" duration="1087000" />
       <workItem from="1493834468375" duration="1935000" />
       <workItem from="1493836481841" duration="16430000" />
-      <workItem from="1493909499694" duration="4315000" />
+      <workItem from="1493909499694" duration="4347000" />
     </task>
     <task id="LOCAL-00001" summary="add image camera">
       <created>1493853120449</created>
@@ -343,11 +342,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493914731752</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="template: fix issues">
+      <created>1493914763345</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1493914763345</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24665000" />
+    <option name="totallyTimeSpent" value="24697000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -396,7 +402,8 @@
     <MESSAGE value="template: refactor code" />
     <MESSAGE value="refactor code" />
     <MESSAGE value="media: add responsive styles" />
-    <option name="LAST_COMMIT_MESSAGE" value="media: add responsive styles" />
+    <MESSAGE value="template: fix issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="template: fix issues" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
