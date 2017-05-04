@@ -1,10 +1,12 @@
 $(document).ready(function(){
     
     $(".signin__memory").labelauty();
+    
+    $(".user__check").labelauty();
 
-    // $( ".capabilities__heading" ).click(function() {
-    //     $( ".capabilities__form" ).toggle('slow');
-    // });
+    $(".user__link").click(function() {
+        $(".user__registration").toggle('slow');
+    });
 
     // $(".contact__heading").click(function(){
     //     $(".contact__form").toggle('slow');
