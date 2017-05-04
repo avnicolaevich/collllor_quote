@@ -1,6 +1,6 @@
 $(document).ready(function(){
     
-    // $(":checkbox").labelauty();
+    $(".signin__memory").labelauty();
 
     // $( ".capabilities__heading" ).click(function() {
     //     $( ".capabilities__form" ).toggle('slow');
@@ -179,6 +179,56 @@ $(document).ready(function(){
   //   	$("#yearpicker").datepicker();
  	// });
 
+    // CHANGE BACKGROUND COLOR
+    $(document).mousemove(function (e) {
+        $("#blueBg").css("opacity", "" + (1 - e.pageY / 1e3));
+    });
+    // CHANGE BACKGROUND COLOR END
+
+    $("#selectSubCategory").scombobox({
+        filterDelay: 300,
+        highlight: !0,
+        filterIgnoreCase: !0,
+        fillOnTab: !0,
+        showDropDown: !1,
+        placeholder: "Sub-category"
+    });
+
+    $("#selectSize").scombobox({
+        filterDelay: 300,
+        highlight: !0,
+        filterIgnoreCase: !0,
+        fillOnTab: !0,
+        showDropDown: !1,
+        placeholder: "Size"
+    });
+
+    $("#selectMaterial").scombobox({
+        filterDelay: 300,
+        highlight: !0,
+        filterIgnoreCase: !0,
+        fillOnTab: !0,
+        showDropDown: !1,
+        placeholder: "Material"
+    });
+
+    $("#selectFinish").scombobox({
+        filterDelay: 300,
+        highlight: !0,
+        filterIgnoreCase: !0,
+        fillOnTab: !0,
+        showDropDown: !1,
+        placeholder: "Finish"
+    });
+
+    $("#selectMore").scombobox({
+        filterDelay: 300,
+        highlight: !0,
+        filterIgnoreCase: !0,
+        fillOnTab: !0,
+        showDropDown: !1,
+        placeholder: "More"
+    });
 });
 
 

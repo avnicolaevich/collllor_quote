@@ -4,9 +4,9 @@
 @import "vars"
 @import "fontello"
 @import "jquery-labelauty"
-@import "chosen"
-@import "jquery-multiselect"
-@import "jquery-ui"
+// @import "chosen"
+// @import "jquery-multiselect"
+// @import "jquery-ui"
 
 *
 	box-sizing: border-box
@@ -67,13 +67,22 @@ p
 	padding: 0
 	margin: 0
 
-a
-	text-decoration: none
-	color: $link
-
 ul, li
 	padding: 0
 	margin: 0
+
+a
+    text-decoration: none
+    transition: .4s ease
+    color: #aeaeae
+
+a:focus, a:hover
+    outline: 0
+    text-decoration: none
+    color: #4a4a4a
+
+button
+    outline: 0
 
 .p0
 	padding: 0 !important
@@ -84,10 +93,355 @@ ul, li
 .up
     margin-top: -1px
 
+.right-border
+    border-right: 1px solid #B1B1B1
+
 .img-responsive
 	display: block
 	max-width: 100%
 	height: auto
+
+.inline-right
+    text-align: right
+
+.margin25
+    margin-top: 25px
+
+.print
+    position: relative
+    z-index: 1
+    min-height: 100vh
+    /*BACKCROUND COLOR END*/
+    background: -webkit-gradient(linear, left top, right top, from(#435bc6), to(#734fa2))
+    background: -webkit-linear-gradient(left, #435bc6 0, #734fa2 100%)
+    background: linear-gradient(to right, #435bc6 0, #734fa2 100%)
+    /*BACKCROUND COLOR END*/
+
+.sup-background
+    position: absolute
+    z-index: -1
+    width: 100%
+    height: 100%
+    /*BACKCROUND COLOR START*/
+    background: -webkit-gradient(linear, left top, right top, from(#01b0dd), to(#196ebd))
+    background: -webkit-linear-gradient(left, #01b0dd 0, #196ebd 100%)
+    background: linear-gradient(to right, #01b0dd 0, #196ebd 100%)
+    /*BACKCROUND COLOR START*/
+
+// PRINT STYLES
+.header
+    background: #fff
+    position: relative
+
+.header__logo
+    line-height: 71px
+
+.header__form 
+    display: inline-block
+    position: relative
+    font-family: Arial, sans-serif
+    color: #aeaeae
+
+.header__form-label
+    font-size: .938em
+    text-transform: uppercase
+    margin-right: 8px
+
+.header__form-subscribe
+    display: none
+
+.header__form-input 
+    padding-left: 35px
+    width: 235px
+    height: 30px
+    font-size: .875em
+    color: #4a4a4a
+    border: 1px solid #aeaeae
+    background-image: url(../img/icon-mail.svg)
+    background-position: 10px 7.5px
+    background-repeat: no-repeat
+
+.header__form-input:active, 
+.header__form-input:focus
+    outline: 0
+
+.header__form-button
+    position: absolute
+    padding: 0
+    height: 28px
+    line-height: 27px
+    width: 24px
+    top: 1px
+    left: 304px
+    border: none
+    background-color: #fff
+
+.header__form-button:active, 
+.header__form-button:focus, 
+.header__form-button:hover
+    outline: 0
+
+.header__form-btn
+    font-size: .813em
+    color: #f45748
+
+.header__link 
+    line-height: 71px
+    border-left: 2px solid #aeaeae
+    color: #aeaeae
+    padding-left: 15px
+    margin-left: 20px
+
+.main
+    margin-top: 25vh
+    text-align: center
+
+.main__heading
+    font-weight: 700
+    font-size: 2.313em
+    letter-spacing: 1px
+    font-family: Arial, sans-serif
+    color: #fff
+
+.main__subheading 
+    font-family: Arial, sans-serif
+    color: #fff
+    padding-top: 28px
+    font-size: 1.188em
+    letter-spacing: 1px
+
+.main__form 
+    padding-top: 36px
+
+.main__form-radio
+    margin-left: -5px
+    padding: 12px
+    border: 1px solid rgba(255, 255, 255, .5)
+    color: #fff
+    text-transform: uppercas
+
+.main__form-radio:first-of-type
+    border-radius: 50px 0 0 50px
+
+.main__form-radio:last-of-type
+    border-radius: 0 50px 50px 0
+
+.main__form-radio:active, 
+.main__form-radio:focus, 
+.main__form-radio:hover
+    background-color: rgba(255, 255, 255, .5)
+
+
+.main__form-check:checked + .main__form-radio
+    background-color: rgba(255, 255, 255, .5)
+
+.main__form-span 
+    padding: 5px
+    background: #fff
+    color: #37a8d7
+    font-size: .875em
+    border-radius: 50px 50px 50px 50px
+
+.main__form-select 
+    margin-top: 10px
+    display: inline-block
+    text-align: left
+    min-width: 200px
+    width: 19%
+    position: relative
+    font-family: Arial, sans-serif
+    color: rgba(255, 255, 255, 0.6)
+    font-size: 1.063em
+
+.main__form-result
+    text-align: right
+    margin: 16px 70px 0 0
+    color: #fff
+
+.main__form-scanning 
+    display: inline-block
+    text-align: center
+    margin: 22px 0
+    font-size: 1.5em
+    font-family: $helvetica_bold
+    color: #fff
+    background-color: #ff8e41
+    border: 1px outset #ff8e41
+    -webkit-border-radius: 3px
+    border-radius: 3px
+    line-height: 65px
+    padding-left: 60px
+    padding-right: 32px
+    transition-duration: .4
+
+.main__form-scanning:hover 
+    background-color: #ff7e41
+
+.main__form-sweep 
+    width: 53px
+    height: 53px
+    padding-left: 10px
+    margin-top: -7px
+
+.scombobox
+    position: relative
+    margin-right: -3px
+
+.scombobox select
+    display: none
+
+.scombobox-display
+    color: rgb(102, 102, 102)
+    width: 100%
+    height: 100%
+    padding: 18px
+    border: 2px solid #fff
+    box-sizing: border-box
+
+.scombobox-display:focus
+    border: 2px solid #ff8e40
+    outline: 0
+
+.scombobox-display:disabled
+    background: #f0f0f0
+
+.scombobox-display.scombobox-invalid
+    background: #ffccd4
+
+.scombobox-display-div 
+    border: 1px solid #ccc
+    border-radius: 4px
+    cursor: pointer
+
+.scombobox-display-div-holder
+    padding: 2px
+
+.scombobox-display-div-item
+    border: 1px solid #ccc
+    margin: 2px
+    float: left
+    height: 100%
+    max-width: 150px
+    padding: 4px 18px 4px 8px
+    position: relative
+    vertical-align: middle
+    white-space: nowrap
+    overflow: hidden
+    cursor: default
+    background: #f8f8f8
+    display: none
+
+.scombobox-display-div-item-text 
+    max-width: 140px
+    overflow: hidden
+
+.scombobox-display-div-item-remove 
+    position: absolute
+    right: 2px
+    top: 2px
+    background: #a0a0a0
+    -webkit-border-radius: 100px
+    border-radius: 100px
+    color: #fff
+    cursor: pointer
+    line-height: 90%
+    padding: 1px 3px 0
+
+.scombobox-display-div-item-remove:hover 
+    background: #408cbe
+
+.scombobox-display-div-item-remove:active 
+    background: #3075a3
+
+.scombobox-list 
+    color: rgb(102, 102, 102)
+    display: none
+    position: absolute
+    max-height: 400px
+    min-width: 100%
+    max-width: 300%
+    white-space: nowrap
+    box-sizing: border-box
+    overflow-y: auto
+    background: #fff
+    border: none
+    box-shadow: 0 0 3px #ccc
+    z-index: 10
+
+.scombobox-list p 
+    text-align: left
+    cursor: pointer
+    margin: 0
+    padding: 20px
+
+.scombobox-list p input[type=checkbox]
+    margin-right: 8px
+    vertical-align: middle
+
+.scombobox-list p.scombobox-hovered, 
+.scombobox-list p:hover 
+    background-color: #f2f2f2
+
+.scombobox-list p.scombobox-separator 
+    height: 2px
+    padding: 0
+    cursor: default
+    background: #eee
+
+.scombobox-list p.scombobox-header 
+    cursor: default
+    background: #eee
+
+.scombobox-dropdown-arrow 
+    position: absolute
+    top: 0
+    right: 0
+    width: 20px
+    height: 100% /* background size: 4 Kb */
+    background: url(data:image/pngbase64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAKT2lDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjanVNnVFPpFj333vRCS4iAlEtvUhUIIFJCi4AUkSYqIQkQSoghodkVUcERRUUEG8igiAOOjoCMFVEsDIoK2AfkIaKOg6OIisr74Xuja9a89+bN/rXXPues852zzwfACAyWSDNRNYAMqUIeEeCDx8TG4eQuQIEKJHAAEAizZCFz/SMBAPh+PDwrIsAHvgABeNMLCADATZvAMByH/w/qQplcAYCEAcB0kThLCIAUAEB6jkKmAEBGAYCdmCZTAKAEAGDLY2LjAFAtAGAnf+bTAICd+Jl7AQBblCEVAaCRACATZYhEAGg7AKzPVopFAFgwABRmS8Q5ANgtADBJV2ZIALC3AMDOEAuyAAgMADBRiIUpAAR7AGDIIyN4AISZABRG8lc88SuuEOcqAAB4mbI8uSQ5RYFbCC1xB1dXLh4ozkkXKxQ2YQJhmkAuwnmZGTKBNA/g88wAAKCRFRHgg/P9eM4Ors7ONo62Dl8t6r8G/yJiYuP+5c+rcEAAAOF0ftH+LC+zGoA7BoBt/qIl7gRoXgugdfeLZrIPQLUAoOnaV/Nw+H48PEWhkLnZ2eXk5NhKxEJbYcpXff5nwl/AV/1s+X48/Pf14L7iJIEyXYFHBPjgwsz0TKUcz5IJhGLc5o9H/LcL//wd0yLESWK5WCoU41EScY5EmozzMqUiiUKSKcUl0v9k4t8s+wM+3zUAsGo+AXuRLahdYwP2SycQWHTA4vcAAPK7b8HUKAgDgGiD4c93/+8//UegJQCAZkmScQAAXkQkLlTKsz/HCAAARKCBKrBBG/TBGCzABhzBBdzBC/xgNoRCJMTCQhBCCmSAHHJgKayCQiiGzbAdKmAv1EAdNMBRaIaTcA4uwlW4Dj1wD/phCJ7BKLyBCQRByAgTYSHaiAFiilgjjggXmYX4IcFIBBKLJCDJiBRRIkuRNUgxUopUIFVIHfI9cgI5h1xGupE7yAAygvyGvEcxlIGyUT3UDLVDuag3GoRGogvQZHQxmo8WoJvQcrQaPYw2oefQq2gP2o8+Q8cwwOgYBzPEbDAuxsNCsTgsCZNjy7EirAyrxhqwVqwDu4n1Y8+xdwQSgUXACTYEd0IgYR5BSFhMWE7YSKggHCQ0EdoJNwkDhFHCJyKTqEu0JroR+cQYYjIxh1hILCPWEo8TLxB7iEPENyQSiUMyJ7mQAkmxpFTSEtJG0m5SI+ksqZs0SBojk8naZGuyBzmULCAryIXkneTD5DPkG+Qh8lsKnWJAcaT4U+IoUspqShnlEOU05QZlmDJBVaOaUt2ooVQRNY9aQq2htlKvUYeoEzR1mjnNgxZJS6WtopXTGmgXaPdpr+h0uhHdlR5Ol9BX0svpR+iX6AP0dwwNhhWDx4hnKBmbGAcYZxl3GK+YTKYZ04sZx1QwNzHrmOeZD5lvVVgqtip8FZHKCpVKlSaVGyovVKmqpqreqgtV81XLVI+pXlN9rkZVM1PjqQnUlqtVqp1Q61MbU2epO6iHqmeob1Q/pH5Z/YkGWcNMw09DpFGgsV/jvMYgC2MZs3gsIWsNq4Z1gTXEJrHN2Xx2KruY/R27iz2qqaE5QzNKM1ezUvOUZj8H45hx+Jx0TgnnKKeX836K3hTvKeIpG6Y0TLkxZVxrqpaXllirSKtRq0frvTau7aedpr1Fu1n7gQ5Bx0onXCdHZ4/OBZ3nU9lT3acKpxZNPTr1ri6qa6UbobtEd79up+6Ynr5egJ5Mb6feeb3n+hx9L/1U/W36p/VHDFgGswwkBtsMzhg8xTVxbzwdL8fb8VFDXcNAQ6VhlWGX4YSRudE8o9VGjUYPjGnGXOMk423GbcajJgYmISZLTepN7ppSTbmmKaY7TDtMx83MzaLN1pk1mz0x1zLnm+eb15vft2BaeFostqi2uGVJsuRaplnutrxuhVo5WaVYVVpds0atna0l1rutu6cRp7lOk06rntZnw7Dxtsm2qbcZsOXYBtuutm22fWFnYhdnt8Wuw+6TvZN9un2N/T0HDYfZDqsdWh1+c7RyFDpWOt6azpzuP33F9JbpL2dYzxDP2DPjthPLKcRpnVOb00dnF2e5c4PziIuJS4LLLpc+Lpsbxt3IveRKdPVxXeF60vWdm7Obwu2o26/uNu5p7ofcn8w0nymeWTNz0MPIQ+BR5dE/C5+VMGvfrH5PQ0+BZ7XnIy9jL5FXrdewt6V3qvdh7xc+9j5yn+M+4zw33jLeWV/MN8C3yLfLT8Nvnl+F30N/I/9k/3r/0QCngCUBZwOJgUGBWwL7+Hp8Ib+OPzrbZfay2e1BjKC5QRVBj4KtguXBrSFoyOyQrSH355jOkc5pDoVQfujW0Adh5mGLw34MJ4WHhVeGP45wiFga0TGXNXfR3ENz30T6RJZE3ptnMU85ry1KNSo+qi5qPNo3ujS6P8YuZlnM1VidWElsSxw5LiquNm5svt/87fOH4p3iC+N7F5gvyF1weaHOwvSFpxapLhIsOpZATIhOOJTwQRAqqBaMJfITdyWOCnnCHcJnIi/RNtGI2ENcKh5O8kgqTXqS7JG8NXkkxTOlLOW5hCepkLxMDUzdmzqeFpp2IG0yPTq9MYOSkZBxQqohTZO2Z+pn5mZ2y6xlhbL+xW6Lty8elQfJa7OQrAVZLQq2QqboVFoo1yoHsmdlV2a/zYnKOZarnivN7cyzytuQN5zvn//tEsIS4ZK2pYZLVy0dWOa9rGo5sjxxedsK4xUFK4ZWBqw8uIq2Km3VT6vtV5eufr0mek1rgV7ByoLBtQFr6wtVCuWFfevc1+1dT1gvWd+1YfqGnRs+FYmKrhTbF5cVf9go3HjlG4dvyr+Z3JS0qavEuWTPZtJm6ebeLZ5bDpaql+aXDm4N2dq0Dd9WtO319kXbL5fNKNu7g7ZDuaO/PLi8ZafJzs07P1SkVPRU+lQ27tLdtWHX+G7R7ht7vPY07NXbW7z3/T7JvttVAVVN1WbVZftJ+7P3P66Jqun4lvttXa1ObXHtxwPSA/0HIw6217nU1R3SPVRSj9Yr60cOxx++/p3vdy0NNg1VjZzG4iNwRHnk6fcJ3/ceDTradox7rOEH0x92HWcdL2pCmvKaRptTmvtbYlu6T8w+0dbq3nr8R9sfD5w0PFl5SvNUyWna6YLTk2fyz4ydlZ19fi753GDborZ752PO32oPb++6EHTh0kX/i+c7vDvOXPK4dPKy2+UTV7hXmq86X23qdOo8/pPTT8e7nLuarrlca7nuer21e2b36RueN87d9L158Rb/1tWeOT3dvfN6b/fF9/XfFt1+cif9zsu72Xcn7q28T7xf9EDtQdlD3YfVP1v+3Njv3H9qwHeg89HcR/cGhYPP/pH1jw9DBY+Zj8uGDYbrnjg+OTniP3L96fynQ89kzyaeF/6i/suuFxYvfvjV69fO0ZjRoZfyl5O/bXyl/erA6xmv28bCxh6+yXgzMV70VvvtwXfcdx3vo98PT+R8IH8o/2j5sfVT0Kf7kxmTk/8EA5jz/GMzLdsAAAAgY0hSTQAAeiUAAICDAAD5/wAAgOkAAHUwAADqYAAAOpgAABdvkl/FRgAAAIxJREFUeNpi/P//PwMuwMSAB7CsWbNm5+PHj93QJeTl5TczKSgoJPz+/fvt+/fvGWD4z58/L7W0tFKZTExMnquoqKQyMzNDjGJh+a+lpZWioaHxkomBgYEhKChovbS09FwGBgYGaWnpGd7e3lsYGBgYGP7//8/w//9/hnv37vEsXLhw86dPn7hgYoABAKFGOliD4ZbPAAAAAElFTkSuQmCC) center no-repeat
+    z-index: 1
+    opacity: .85
+    cursor: pointer
+
+.scombobox-dropdown-arrow:hover 
+    opacity: 1
+
+.scombobox-dropdown-arrow-up 
+    background: url(data:image/pngbase64,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) center no-repeat
+
+.scombobox-dropdown-background
+    position: absolute
+    top: 0
+    right: 0
+    width: 20px
+    height: 100%
+    background: #fff
+    border: 1px solid #ccc
+    -webkit-border-radius: 0 4px 4px 0
+    border-radius: 0 4px 4px 0
+    border-left: none
+    -webkit-box-sizing: border-box
+    box-sizing: border-box
+    -moz-box-sizing: border-box
+
+.scombobox-dropdown-background-invalid
+    border-left: 1px solid #ccc
+
+.scombobox-marker
+    color: #4a4a4a
+
+.scombobox input[type=checkbox]
+    cursor: pointer
+
+.scombobox-disabled .scombobox-dropdown-arrow, 
+.scombobox-disabled .scombobox-dropdown-background
+    display: none
+
+.scombobox-disabled .scombobox-display-div
+    background: #f8f8f8
+    cursor: default
+
+// PRINT STYLES END
 
 // QUOTE STYLES
 .quote
@@ -120,6 +474,7 @@ ul, li
         margin: auto
         max-width: 500px
     &__info
+        width: 100%
         @include info
     &__sketch
         display: block
@@ -198,195 +553,227 @@ ul, li
             text-decoration: none
             background: #ff7e41
             color: #ffffff
-
-
 //QUOTE STYLES END
 
+// SIGNIN STYLES
+.signin
+    margin-top: 100px
+    padding-bottom: 35px
+    &__content
+        max-width: 500px
+        margin: auto
+        // border-right: 1px solid #B1B1B1
+    &__heading
+        text-align: center
+        font-size: 2.375em
+        color: rgb(112, 110, 110)
+        padding-bottom: 35px
+    &__info
+        width: 100%
+        @include info
+    &__link
+        display: block
+        padding-top: 20px
+        padding-bottom: 30px
+        @include text_link
+    &__memory
+        &-legend
+            position: relative
+            color: $font_color
+            top: -25px
+            left: 50px
+    
+
+
+
+// SIGNIN STYLES END
+
+
 //COMBOBOX STYLES
-.scombobox
-    position: relative
-    font-family: $helvetica_light
-.scombobox select
-    display: none
-.scombobox-display
-    color: rgba(0, 0, 0, .6)
-    width: 100%
-    height: 58px
-    padding: 18px 18px
-    font-size: 1.063em
-    border: 1px solid #b1b1b1
-    box-sizing: border-box
-.scombobox-display:focus
-    border: 1px solid #ff8e40 
-    outline: 0
-.scombobox-display:focus
-    border-bottom: 1px solid #b1b1b1 
-    outline: 0
-.scombobox-display:disabled
-    background: #f0f0f0
-.scombobox-display.scombobox-invalid
-	background: #ededed
-	color: #2b2b2b
-.scombobox-display-div
-    border: 1px solid #ccc
-    cursor: pointer
-.scombobox-display-div-holder
-    padding: 2px
-    margin-left: 5px
-.scombobox-display-div-item
-    border: 1px solid #ccc
-    margin: 2px
-    float: left
-    height: 40%
-    max-width: 200px
-    padding: 4px 18px 4px 8px
-    position: relative
-    vertical-align: middle
-    white-space: nowrap
-    overflow: hidden
-    cursor: default
-    background: #f8f8f8
-    display: none
-.scombobox-display-div-item-text
-    width: 200px
-    overflow: hidden
-.scombobox-display-div-item-remove
-    position: absolute
-    right: -1px
-    top: 5px
-    margin-right: 10px
-    background: #a0a0a0
-    border-radius: 100px
-    color: #fff
-    cursor: pointer
-    line-height: 87%
-    padding: 1px 3px 2px
-.scombobox-display-div-item-remove:hover
-    background: $button
-.scombobox-display-div-item-remove:active
-    background: $button
-.scombobox-list
-    color: rgba(0, 0, 0, .6)
-    display: none
-    position: absolute
-    max-height: 200px
-    min-width: 100%
-    max-width: 300%
-    white-space: nowrap
-    box-sizing: border-box
-    overflow-y: auto
-    background: #fff
-    border: none
-    box-shadow: 0 0 3px #ccc
-    z-index: 10
-.scombobox-list p
-    text-align: left
-    cursor: pointer
-    margin: 0
-    padding: 20px
-.scombobox-list p input[type="checkbox"]
-    margin-right: 18px
-    vertical-align: middle
-.scombobox-list p.scombobox-hovered,
-.scombobox-list p:hover
-    background-color: #f2f2f2
-.scombobox-list p.scombobox-separator
-    height: 2px
-    padding: 0
-    cursor: default
-    background: #eee
-.scombobox-list p.scombobox-header
-	cursor: default
-	background: #eee
-	font-size: 1.063em
-	font-family: $helvetica_bold
-	color: $button
-.scombobox-dropdown-arrow
-    position: absolute
-    top: 20px
-    right: 0
-    width: 20px
-    height: 20px
-    /* background size: 4 Kb */
-    background: url("../img/ui-icons_444444_256x240.png") -65px -16px
-    opacity: 0.5
-    z-index: 1
-    cursor: pointer
-.scombobox-dropdown-arrow:hover
-    opacity: 1
-.scombobox-dropdown-arrow-up
-    background: url("../img/ui-icons_444444_256x240.png") -65px -16px
-.scombobox-dropdown-background
-    position: absolute
-    top: 1px
-    right: 1px
-    width: 20px
-    height: 56px
-    background: #fff
-    // border: 2px solid #b1b1b1
-    border-left: none
-    box-sizing: border-box
-.scombobox-display:focus .scombobox-dropdown-background:focus
-    outline: 0
-    border: 1px solid #ff8e40
-    border-left: none
-.scombobox-dropdown-background-invalid
-    border-left: 1px solid #ccc
-.scombobox-marker
-    background: rgb(17, 147, 154)
-    color: white
-    border-radius: 2px
-    padding: 0 2px
-    margin: 0 2px
-.scombobox input[type="checkbox"]
-    cursor: pointer
-.scombobox-disabled .scombobox-dropdown-arrow,
-.scombobox-disabled .scombobox-dropdown-background
-    display: none
-.scombobox-disabled .scombobox-display-div
-    background: #f8f8f8
-    cursor: default
-// COMBOBOX STYLES END
+// .scombobox
+//     position: relative
+//     font-family: $helvetica_light
+// .scombobox select
+//     display: none
+// .scombobox-display
+//     color: rgba(0, 0, 0, .6)
+//     width: 100%
+//     height: 58px
+//     padding: 18px 18px
+//     font-size: 1.063em
+//     border: 1px solid #b1b1b1
+//     box-sizing: border-box
+// .scombobox-display:focus
+//     border: 1px solid #ff8e40 
+//     outline: 0
+// .scombobox-display:focus
+//     border-bottom: 1px solid #b1b1b1 
+//     outline: 0
+// .scombobox-display:disabled
+//     background: #f0f0f0
+// .scombobox-display.scombobox-invalid
+// 	background: #ededed
+// 	color: #2b2b2b
+// .scombobox-display-div
+//     border: 1px solid #ccc
+//     cursor: pointer
+// .scombobox-display-div-holder
+//     padding: 2px
+//     margin-left: 5px
+// .scombobox-display-div-item
+//     border: 1px solid #ccc
+//     margin: 2px
+//     float: left
+//     height: 40%
+//     max-width: 200px
+//     padding: 4px 18px 4px 8px
+//     position: relative
+//     vertical-align: middle
+//     white-space: nowrap
+//     overflow: hidden
+//     cursor: default
+//     background: #f8f8f8
+//     display: none
+// .scombobox-display-div-item-text
+//     width: 200px
+//     overflow: hidden
+// .scombobox-display-div-item-remove
+//     position: absolute
+//     right: -1px
+//     top: 5px
+//     margin-right: 10px
+//     background: #a0a0a0
+//     border-radius: 100px
+//     color: #fff
+//     cursor: pointer
+//     line-height: 87%
+//     padding: 1px 3px 2px
+// .scombobox-display-div-item-remove:hover
+//     background: $button
+// .scombobox-display-div-item-remove:active
+//     background: $button
+// .scombobox-list
+//     color: rgba(0, 0, 0, .6)
+//     display: none
+//     position: absolute
+//     max-height: 200px
+//     min-width: 100%
+//     max-width: 300%
+//     white-space: nowrap
+//     box-sizing: border-box
+//     overflow-y: auto
+//     background: #fff
+//     border: none
+//     box-shadow: 0 0 3px #ccc
+//     z-index: 10
+// .scombobox-list p
+//     text-align: left
+//     cursor: pointer
+//     margin: 0
+//     padding: 20px
+// .scombobox-list p input[type="checkbox"]
+//     margin-right: 18px
+//     vertical-align: middle
+// .scombobox-list p.scombobox-hovered,
+// .scombobox-list p:hover
+//     background-color: #f2f2f2
+// .scombobox-list p.scombobox-separator
+//     height: 2px
+//     padding: 0
+//     cursor: default
+//     background: #eee
+// .scombobox-list p.scombobox-header
+// 	cursor: default
+// 	background: #eee
+// 	font-size: 1.063em
+// 	font-family: $helvetica_bold
+// 	color: $button
+// .scombobox-dropdown-arrow
+//     position: absolute
+//     top: 20px
+//     right: 0
+//     width: 20px
+//     height: 20px
+//     /* background size: 4 Kb */
+//     background: url("../img/ui-icons_444444_256x240.png") -65px -16px
+//     opacity: 0.5
+//     z-index: 1
+//     cursor: pointer
+// .scombobox-dropdown-arrow:hover
+//     opacity: 1
+// .scombobox-dropdown-arrow-up
+//     background: url("../img/ui-icons_444444_256x240.png") -65px -16px
+// .scombobox-dropdown-background
+//     position: absolute
+//     top: 1px
+//     right: 1px
+//     width: 20px
+//     height: 56px
+//     background: #fff
+//     // border: 2px solid #b1b1b1
+//     border-left: none
+//     box-sizing: border-box
+// .scombobox-display:focus .scombobox-dropdown-background:focus
+//     outline: 0
+//     border: 1px solid #ff8e40
+//     border-left: none
+// .scombobox-dropdown-background-invalid
+//     border-left: 1px solid #ccc
+// .scombobox-marker
+//     background: rgb(17, 147, 154)
+//     color: white
+//     border-radius: 2px
+//     padding: 0 2px
+//     margin: 0 2px
+// .scombobox input[type="checkbox"]
+//     cursor: pointer
+// .scombobox-disabled .scombobox-dropdown-arrow,
+// .scombobox-disabled .scombobox-dropdown-background
+//     display: none
+// .scombobox-disabled .scombobox-display-div
+//     background: #f8f8f8
+//     cursor: default
+// // COMBOBOX STYLES END
 
-// FONTELLO ICONS STYLES
-@font-face
-	font-family: 'fontello'
-	src: url('../fonts/fontello/fontello.eot?21194324')
-	src: url('../fonts/fontello/fontello.eot?21194324#iefix') format('embedded-opentype')
-    src: url('../fonts/fontello/fontello.woff2?21194324') format('woff2')
-    src: url('../fonts/fontello/fontello.woff?21194324') format('woff')
-    src: url('../fonts/fontello/fontello.ttf?21194324') format('truetype')
-    src: url('../fonts/fontello/fontello.svg?21194324#fontello') format('svg')
-	font-weight: normal
-	font-style: normal
-[class^="icon-"]:before, [class*=" icon-"]:before
-	font-family: "fontello"
-	font-style: normal
-	font-weight: normal
-	speak: none
-	display: inline-block
-	text-decoration: inherit
-	width: 1em
-	margin-right: .2em
-	text-align: center
- 	/* For safety - reset parent styles, that can break glyph codes*/
-	font-variant: normal
-	text-transform: none
-	/* fix buttons height, for twitter bootstrap */
-	line-height: 1em
-	/* Animation center compensation - margins should be symmetric */
-	/* remove if not needed */
-	margin-left: .2em
-	/* you can be more comfortable with increased icons size */
-	/* font-size: 120%; */
-	/* Font smoothing. That was taken from TWBS */
-	-webkit-font-smoothing: antialiased
-	-moz-osx-font-smoothing: grayscale
-	/* Uncomment for 3D effect */
-	/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+// // FONTELLO ICONS STYLES
+// @font-face
+// 	font-family: 'fontello'
+// 	src: url('../fonts/fontello/fontello.eot?21194324')
+// 	src: url('../fonts/fontello/fontello.eot?21194324#iefix') format('embedded-opentype')
+//     src: url('../fonts/fontello/fontello.woff2?21194324') format('woff2')
+//     src: url('../fonts/fontello/fontello.woff?21194324') format('woff')
+//     src: url('../fonts/fontello/fontello.ttf?21194324') format('truetype')
+//     src: url('../fonts/fontello/fontello.svg?21194324#fontello') format('svg')
+// 	font-weight: normal
+// 	font-style: normal
+// [class^="icon-"]:before, [class*=" icon-"]:before
+// 	font-family: "fontello"
+// 	font-style: normal
+// 	font-weight: normal
+// 	speak: none
+// 	display: inline-block
+// 	text-decoration: inherit
+// 	width: 1em
+// 	margin-right: .2em
+// 	text-align: center
+//  	/* For safety - reset parent styles, that can break glyph codes*/
+// 	font-variant: normal
+// 	text-transform: none
+// 	/* fix buttons height, for twitter bootstrap */
+// 	line-height: 1em
+// 	/* Animation center compensation - margins should be symmetric */
+// 	/* remove if not needed */
+// 	margin-left: .2em
+// 	/* you can be more comfortable with increased icons size */
+// 	/* font-size: 120%; */
+// 	/* Font smoothing. That was taken from TWBS */
+// 	-webkit-font-smoothing: antialiased
+// 	-moz-osx-font-smoothing: grayscale
+// 	/* Uncomment for 3D effect */
+// 	/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 
-.icon-help:before
-    content: '\f128' /* '' */
+// .icon-help:before
+//     content: '\f128' /* '' */
 //FONTELLO ICONS STYLES END
 
 @import "media" // Всегда в конце

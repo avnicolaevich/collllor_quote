@@ -5,6 +5,9 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1199px)
+    /**/
+    .main
+        margin-top: 20vh
     .quote__map
         margin: auto
         margin-bottom: 30px
@@ -20,6 +23,9 @@
         height: 205px
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
+    /**/
+    .main
+        margin-top: 15vh
     .quote__help
         display: none
     .quote__image
@@ -27,13 +33,77 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
-	body
+    /**/
+    body
         font-size: 14px
 
+    .header__form
+        width: 73%
+
+    .header__form-label
+        display: none
+
+    .header__form-mail
+        left: 40px
+
+    .header__form-subscribe 
+        display: inline-block
+        font-size: 1.375em
+
+    .header__form-input
+        padding-left: 30px
+        width: 28px
+        transition: width .4s ease-in-out
+
+    .header__form-input:focus 
+        width: 100%
+
+    .header__form-button 
+        display: none
+
+    .header__link
+        margin-left: 0
+
+    .main
+        margin-top: 10vh
+
+    .main__form-radio
+        padding: 8px
+
+    .main__form-select
+        width: 80%
+
+    .main__form-scanning 
+        line-height: 35px
+
+    .scombobox
+        margin-right: -2px
+
+    .scombobox-display
+        padding: 10px
+
+    .scombobox-list p
+        padding: 10px
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
-	/**/
+    .print
+        font-size: 12px
+    .margin25
+        margin-top: 10px
 
+    .main__form 
+        padding-top: 10px
+
+    .main__form-radio 
+        display: block
+        margin-top: 10px
+        border-radius: 50px 50px 50px 50px
+
+    .main__form-radio:first-of-type
+        border-radius: 50px 50px 50px 50px
+
+    .main__form-radio:last-of-type
+        border-radius: 50px 50px 50px 50px 
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)
