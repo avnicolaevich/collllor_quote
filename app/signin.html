@@ -25,21 +25,23 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-md-6 bottom-border">
-					<div class="signin__content">
-						<h1 class="signin__heading-login">Login</h1>
-						<input class="signin__info" type="text"  placeholder="Username/Email" name="username" required autocomplete="off"/>
-						<input class="signin__info up" type="password"  placeholder="Password" name="psw" required autocomplete="off"/>
-						<a class="signin__link" href="javascript:void(0);">Forgot Password?</a>
-						<input class="signin__memory" type="checkbox" name="memory">
-						<span class="signin__memory-legend">Remember me</span>
-						<a class="signin__button" href="javascript:void(0);">Login</a>
-					</div>
+					<form action="#" method="post">
+						<div class="signin__content">
+							<h1 class="signin__heading-login">Login</h1>
+							<input class="signin__info signin__info-bottom" type="text"  placeholder="Username/Email" name="username" required autocomplete="off"/>
+							<input class="signin__info" type="password"  placeholder="Password" name="psw" required autocomplete="off"/>
+							<a class="signin__link" href="javascript:void(0);">Forgot Password?</a>
+							<input class="signin__memory" type="checkbox" name="memory">
+							<span class="signin__memory-legend">Remember me</span>
+							<button class="signin__button" type="submit" >Login</button>
+						</div>
+					</form>
 				</div>
 				<div class="col-xs-12 col-md-6">
 					<div class="signin__content">
 						<h2 class="signin__heading-create">Create your account</h2>
 						<p class="signin__description">Creating an account is easy. Just fill in the form below and enjoy the benefits of having an account.</p>
-						<a class="signin__button" href="javascript:void(0);">Sign up</a>
+						<button class="signin__button" type="submit">Sign up</button>
 					</div>
 				</div>
 			</div>

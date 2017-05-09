@@ -90,8 +90,8 @@ button
 .m0
 	margin: 0 !important
 
-.up
-    margin-top: -1px
+// .up
+//     margin-top: -1px
 
 .img-responsive
 	display: block
@@ -124,6 +124,16 @@ button
     background: -webkit-linear-gradient(left, #01b0dd 0, #196ebd 100%)
     background: linear-gradient(to right, #01b0dd 0, #196ebd 100%)
     /*BACKCROUND COLOR START*/
+
+/**
+ * style input elements that have a required
+ * attribute and a focus state
+ */
+input:required:focus,
+textarea:required:focus
+    border: 1px solid red
+    box-shadow: 2px 2px 10px rgba(200, 0, 0, 0.85)
+    outline: none
 
 // PRINT STYLES
 .header
@@ -282,7 +292,7 @@ button
 
 .scombobox
     position: relative
-    margin-right: -3px
+    // margin-right: -3px
 
 .scombobox select
     display: none
@@ -409,13 +419,13 @@ button
 .scombobox-dropdown-background
     position: absolute
     top: 0
-    right: 0
+    right: 2px
     width: 20px
     height: 100%
     background: #fff
-    border: 1px solid #ccc
-    -webkit-border-radius: 0 4px 4px 0
-    border-radius: 0 4px 4px 0
+    // border: 1px solid #ccc
+    // -webkit-border-radius: 0 4px 4px 0
+    // border-radius: 0 4px 4px 0
     border-left: none
     -webkit-box-sizing: border-box
     box-sizing: border-box
@@ -473,6 +483,8 @@ button
     &__info
         width: 100%
         @include info
+        &-bottom
+            border-bottom: 1px solid $white
     &__sketch
         display: block
         width: 100%
@@ -543,9 +555,10 @@ button
         text-align: center
         padding: 20px 40px
         background: #ff8e41
-        max-width: 147px
+        width: 147px
         cursor: pointer
         transition: .5s ease
+        border: none
         &:hover, &:active, &:focus
             text-decoration: none
             background: #ff7e41
@@ -567,10 +580,13 @@ button
     &__info
         width: 100%
         @include info
+        &-bottom
+            border-bottom: 1px solid $white
     &__link
         display: block
         padding-top: 20px
         @include text_link
+        margin-bottom: 30px
     &__memory
         &-legend
             position: relative
@@ -601,7 +617,7 @@ button
         padding-top: 60px
         padding-bottom: 60px
     &__heading
-        font-family: $helvetica_light
+        font-family: $helvetica_regular
         font-size: 2.688em
         color: rgb(112, 110, 110)
         letter-spacing: 1px
@@ -609,7 +625,7 @@ button
         display: block
         padding-left: 100px
         padding-top: 8px
-        font-family: $helvetica_bold
+        font-family: $helvetica_light
         color: rgba(60, 59, 59, .7)
         font-size: 2.25em
         letter-spacing: 2px
@@ -627,7 +643,7 @@ button
     &__wrapper
         width: 100%
     &__agree
-        margin: auto
+        margin: 30px auto
         width: 83%
     &__check-legend
         position: relative
@@ -655,17 +671,19 @@ button
         transition: border-color .25s ease, box-shadow .25s ease
         &-firstname
             display: inline-block
-            width: 41.7%
+            width: 41.5%
             margin-left: 8.5%
             float: left
-            margin-right: -1px
-            margin-bottom: -1px
+            border-right: 1px solid $white
+            border-bottom: 1px solid $white
         &-lastname
             display: inline-block
-            width: 41.6%
-            margin-bottom: -1px
-        &__password 
-            margin-bottom: 20px 
+            width: 41.5%
+            border-bottom: 1px solid $white
+        &-bottom
+            border-bottom: 1px solid $white
+    &__password 
+        margin-bottom: 20px 
         &:focus
             outline: 0
             color: #B1B1B1
@@ -702,195 +720,292 @@ button
             line-height: 24px
             text-align: left
 input.labelauty + label
-    margin-top: 30px
+    // margin-top: 30px
 // USER STYLES END
 
+// SELLER_APP STYLES
 
-//COMBOBOX STYLES
-// .scombobox
-//     position: relative
-//     font-family: $helvetica_light
-// .scombobox select
-//     display: none
-// .scombobox-display
-//     color: rgba(0, 0, 0, .6)
-//     width: 100%
-//     height: 58px
-//     padding: 18px 18px
-//     font-size: 1.063em
-//     border: 1px solid #b1b1b1
-//     box-sizing: border-box
-// .scombobox-display:focus
-//     border: 1px solid #ff8e40 
-//     outline: 0
-// .scombobox-display:focus
-//     border-bottom: 1px solid #b1b1b1 
-//     outline: 0
-// .scombobox-display:disabled
-//     background: #f0f0f0
-// .scombobox-display.scombobox-invalid
-// 	background: #ededed
-// 	color: #2b2b2b
-// .scombobox-display-div
-//     border: 1px solid #ccc
-//     cursor: pointer
-// .scombobox-display-div-holder
-//     padding: 2px
-//     margin-left: 5px
-// .scombobox-display-div-item
-//     border: 1px solid #ccc
-//     margin: 2px
-//     float: left
-//     height: 40%
-//     max-width: 200px
-//     padding: 4px 18px 4px 8px
-//     position: relative
-//     vertical-align: middle
-//     white-space: nowrap
-//     overflow: hidden
-//     cursor: default
-//     background: #f8f8f8
-//     display: none
-// .scombobox-display-div-item-text
-//     width: 200px
-//     overflow: hidden
-// .scombobox-display-div-item-remove
-//     position: absolute
-//     right: -1px
-//     top: 5px
-//     margin-right: 10px
-//     background: #a0a0a0
-//     border-radius: 100px
-//     color: #fff
-//     cursor: pointer
-//     line-height: 87%
-//     padding: 1px 3px 2px
-// .scombobox-display-div-item-remove:hover
-//     background: $button
-// .scombobox-display-div-item-remove:active
-//     background: $button
-// .scombobox-list
-//     color: rgba(0, 0, 0, .6)
-//     display: none
-//     position: absolute
-//     max-height: 200px
-//     min-width: 100%
-//     max-width: 300%
-//     white-space: nowrap
-//     box-sizing: border-box
-//     overflow-y: auto
-//     background: #fff
-//     border: none
-//     box-shadow: 0 0 3px #ccc
-//     z-index: 10
-// .scombobox-list p
-//     text-align: left
-//     cursor: pointer
-//     margin: 0
-//     padding: 20px
-// .scombobox-list p input[type="checkbox"]
-//     margin-right: 18px
-//     vertical-align: middle
-// .scombobox-list p.scombobox-hovered,
-// .scombobox-list p:hover
-//     background-color: #f2f2f2
-// .scombobox-list p.scombobox-separator
-//     height: 2px
-//     padding: 0
-//     cursor: default
-//     background: #eee
-// .scombobox-list p.scombobox-header
-// 	cursor: default
-// 	background: #eee
-// 	font-size: 1.063em
-// 	font-family: $helvetica_bold
-// 	color: $button
-// .scombobox-dropdown-arrow
-//     position: absolute
-//     top: 20px
-//     right: 0
-//     width: 20px
-//     height: 20px
-//     /* background size: 4 Kb */
-//     background: url("../img/ui-icons_444444_256x240.png") -65px -16px
-//     opacity: 0.5
-//     z-index: 1
-//     cursor: pointer
-// .scombobox-dropdown-arrow:hover
-//     opacity: 1
-// .scombobox-dropdown-arrow-up
-//     background: url("../img/ui-icons_444444_256x240.png") -65px -16px
-// .scombobox-dropdown-background
-//     position: absolute
-//     top: 1px
-//     right: 1px
-//     width: 20px
-//     height: 56px
-//     background: #fff
-//     // border: 2px solid #b1b1b1
-//     border-left: none
-//     box-sizing: border-box
-// .scombobox-display:focus .scombobox-dropdown-background:focus
-//     outline: 0
-//     border: 1px solid #ff8e40
-//     border-left: none
-// .scombobox-dropdown-background-invalid
-//     border-left: 1px solid #ccc
-// .scombobox-marker
-//     background: rgb(17, 147, 154)
-//     color: white
-//     border-radius: 2px
-//     padding: 0 2px
-//     margin: 0 2px
-// .scombobox input[type="checkbox"]
-//     cursor: pointer
-// .scombobox-disabled .scombobox-dropdown-arrow,
-// .scombobox-disabled .scombobox-dropdown-background
-//     display: none
-// .scombobox-disabled .scombobox-display-div
-//     background: #f8f8f8
-//     cursor: default
-// // COMBOBOX STYLES END
+.seller-header
+	background: $white
+	position: relative
+	&__registration
+		padding-top: 12px
+		width: 400px
+		background: $white
+		height: auto
+		position: absolute
+		right: 2%
+		z-index: 1
+	&__sign
+		display: block
+		text-decoration: none
+		padding: 16px 10px 16px 20px
+		background: rgb(0, 163, 164)
+		color: #ffffff
+		font-size: 1.250em
+		width: 83%
+		text-align: left
+		cursor: pointer
+		margin: auto
+		text-transform: uppercase
+		-webkit-transition: .5s ease
+		transition: .5s ease
+		margin-bottom: 30px
+		margin-top: 20px
+		&:after
+			content: ""
+			display: table
+			clear: both
+		&:hover
+			text-decoration: none
+			background: rgb(0, 143, 144)
+			color: #ffffff	
+	&__logo
+		line-height: 71px
+	&__form
+		display: inline-block
+		position: relative
+		font-family: Arial, sans-serif
+		color: $font_color
+		&-label
+			font-size: .938em
+			text-transform: uppercase
+			line-height: 71px
+			margin-right: 8px
+		&-subscribe
+			display: none
+		&-input
+			padding-left: 35px
+			width: 235px
+			height: 30px
+			font-size: .875em
+			color: $font_color
+			border: 1px solid rgb(226, 222, 222)
+			background: url(../img/icon-mail.svg) 10px 7.5px no-repeat
+			&:active, &:focus
+				outline: 0
+		&-button
+			position: absolute
+			padding: 0
+			height: 28px
+			line-height: 27px
+			width: 24px
+			top: 22px
+			left: 304px
+			border: none
+			background-color: $white
+			&:active, &:focus, &:hover
+				outline: 0
+		&-btn
+			font-size: .813em
+			color: rgb(252, 90, 73)
+	&__heading
+		padding-top: 55px
+		padding-bottom: 127px
+		color: rgba(60, 59, 59, .7)
+		font-family: $helvetica_regular
+		font-size: 2.688em
+		margin-left: -25px
+		letter-spacing: 2px
+	&__link
+		display: inline-block
+		padding-top: 60px
+		padding-bottom: 30px
+		font-family: $helvetica_light
+		color: rgba(60, 59, 59, .7)
+		font-size: 2.25em
+		letter-spacing: 2px
+		&:active, &:focus, &:hover
+			text-decoration: none
+			color: rgb(161, 161, 161)
+	&__check
+		&-span
+			position: relative
+			top: -24px
+			left: 50px
+			color: $input_color
+	&__info
+		margin: auto
+		font-size: 1.063em
+		display: block
+		width: 83%
+		height: 55px
+		padding: 20px 10px
+		border: 1px solid #B1B1B1
+		border-bottom: none
+		color: #B1B1B1
+		-webkit-transition: border-color .25s ease, box-shadow .25s ease
+		transition: border-color .25s ease, box-shadow .25s ease
+		&-firstname
+			display: inline-block
+			width: 41.5%
+			margin-left: 8.5%
+			float: left
+			border-right: none
+		&-lastname
+			display: inline-block
+			width: 41.5%
+		&-zip
+			display: inline-block
+			width: 41.5%
+		&-city
+			display: inline-block
+			width: 41.5%
+			margin-left: 8.5%
+			border-right: none
+			float: left
+		&-web
+			border-bottom: 1px solid #B1B1B1
+		&:focus
+			outline: 0
+			color: #B1B1B1
+			border-color: #BCBBBB
+	&__area
+		resize: vertical
+		margin: auto
+		font-size: 1.063em
+		display: block
+		width: 83%
+		height: 195px
+		padding: 20px 10px
+		border: 1px solid #B1B1B1
+		color: #B1B1B1
+		outline: none
+		&-text
+			padding-bottom: 24px
+			padding-left: 5px
+			color: rgb(239, 6, 6)
+			font-size: 12px
+			line-height: 26px
+			width: 83%
+			margin: auto	
+	&__apply
+		width: 400px
+		background: $white
+		height: auto
+	&__reg
+		margin-top: 45px
+		text-align: center
+	&__wrap
+		max-width: 400px
+	&__login
+		width: 83%
+		margin: auto
+		color: rgb(154, 149, 149)
+		font-size: 18px
+		&-link
+			text-decoration: none
+			color: rgb(239, 6, 6)
+			font-size: 18px
+			&:hover, &:active, &:focus
+				text-decoration: none
+				color: rgb(239, 6, 6)
+	&__seller
+		width: 83%
+		margin: auto
+		color: rgb(154, 149, 149)
+		font-size: 12px
+		padding: 20px 0
+		&-link
+			text-decoration: none
+			color: rgb(239, 6, 6)
+			font-size: 12px
+			&:hover, &:active, &:focus
+				text-decoration: none
+				color: rgb(239, 6, 6)
+.seller-header__sign .active
+	background: rgb(0, 143, 144)
+	color: #ffffff
+.seller-header__content > div:last-child
+	display: none
+.icon-right-thin
+	padding-left: 220px
+	vertical-align: middle
+	font-size: 13px
+.seller-header__row:after
+	content: ""
+	display: table
+	clear: both
+.seller-header__row > div
+	width: 100%
+.seller-header__row > div:last-child
+	margin: 0
+#selectState .scombobox .scombobox-dropdown-background
+	position: absolute
+	top: 0
+	right: 0
+	width: 20px
+	height: 100%
+	background: #fff
+	border-left: none
+#selectState .scombobox-display:focus
+    border: 1px solid #ff8e40
+#selectState .scombobox-list
+	color: rgba(0, 0, 0, 0.6)
+	display: none
+	position: absolute
+	max-height: 282px
+	min-width: 100%
+	max-width: 300%
+	white-space: nowrap
+	box-sizing: border-box
+	overflow-y: auto
+	background: white
+	border: 1px solid #ff8e40
+	box-shadow: 0 0 3px #CCC
+	z-index: 10
+#selectState .scombobox-display
+	color: rgba(0, 0, 0, 0.6)
+	width: 83%
+	height: 55px
+	padding: 20px 10px
+	margin-left: 8.5%
+	border: 1px solid #B1B1B1
+	box-sizing: border-box
+.seller-main
+	&__illustration
+		max-width: 100%
+		height: 612px
+		background: url("../img/main_picture.jpg") center center no-repeat
+		background-size: cover
+	&__background
+		max-width: 100%
+		height: 612px
+		background-color: rgb(115, 80, 162)
+.seller-selling
+	padding-top: 80px
+	padding-bottom: 110px
+	&__heading
+		padding-bottom: 85px
+		color: rgba(60, 59, 59, .7)
+		font-family: $helvetica_regular
+		font-size: 2.688em
+		letter-spacing: 2px
+	&__subheading
+		padding-top: 35px
+		padding-bottom: 30px
+		font-family: $helvetica_bold
+		color: rgba(60, 59, 59, .7)
+		font-size: 1.563em
+	&__text
+		color: rgb(97, 95, 95)
+		line-height: 22px
+	&__link
+		color: rgb(234, 20, 20)
+		text-decoration: underline
+		&:active, &:focus, &:hover
+			color: rgb(252, 90, 73)
+			text-decoration: none
+.seller-footer
+	background-color: rgb(248, 248, 249)
+	&__text
+		padding-top: 50px
+		padding-bottom: 50px
+		text-align: center
+		color: rgb(98, 95, 95)
+		font-size: .875em
+		line-height: 1.5
+// SELLER_APP STYLES END
 
-// // FONTELLO ICONS STYLES
-// @font-face
-// 	font-family: 'fontello'
-// 	src: url('../fonts/fontello/fontello.eot?21194324')
-// 	src: url('../fonts/fontello/fontello.eot?21194324#iefix') format('embedded-opentype')
-//     src: url('../fonts/fontello/fontello.woff2?21194324') format('woff2')
-//     src: url('../fonts/fontello/fontello.woff?21194324') format('woff')
-//     src: url('../fonts/fontello/fontello.ttf?21194324') format('truetype')
-//     src: url('../fonts/fontello/fontello.svg?21194324#fontello') format('svg')
-// 	font-weight: normal
-// 	font-style: normal
-// [class^="icon-"]:before, [class*=" icon-"]:before
-// 	font-family: "fontello"
-// 	font-style: normal
-// 	font-weight: normal
-// 	speak: none
-// 	display: inline-block
-// 	text-decoration: inherit
-// 	width: 1em
-// 	margin-right: .2em
-// 	text-align: center
-//  	/* For safety - reset parent styles, that can break glyph codes*/
-// 	font-variant: normal
-// 	text-transform: none
-// 	/* fix buttons height, for twitter bootstrap */
-// 	line-height: 1em
-// 	/* Animation center compensation - margins should be symmetric */
-// 	/* remove if not needed */
-// 	margin-left: .2em
-// 	/* you can be more comfortable with increased icons size */
-// 	/* font-size: 120%; */
-// 	/* Font smoothing. That was taken from TWBS */
-// 	-webkit-font-smoothing: antialiased
-// 	-moz-osx-font-smoothing: grayscale
-// 	/* Uncomment for 3D effect */
-// 	/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
-
-// .icon-help:before
-//     content: '\f128' /* '' */
-//FONTELLO ICONS STYLES END
 
 @import "media" // Всегда в конце

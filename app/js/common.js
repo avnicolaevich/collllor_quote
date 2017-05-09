@@ -8,178 +8,43 @@ $(document).ready(function(){
         $(".user__registration").toggle('slow');
     });
 
-    // $(".contact__heading").click(function(){
-    //     $(".contact__form").toggle('slow');
-    // });
+    $(".seller-header__check-input").labelauty();
 
-    // $(".password__heading").click(function(){
-    //     $(".password__form").toggle('slow');
-    // });
 
-    // $(".payment__heading").click(function(){
-    //     $(".payment__form").toggle('slow');
-    // });
+    $('.seller-header__sign').on('click', function (e) {
+        e.preventDefault();
+        $(this).parent().addClass('active');
+        $(this).parent().siblings().removeClass('active');
+        target = $(this).attr('href');
+        $('.seller-header__content > div').not(target).hide();
+        $(target).fadeIn(600);
+    });
 
-    // $(".verify__heading").click(function(){
-    //     $(".verify__form").toggle('slow');
-    // });
+    $('#selectState').scombobox({
+        filterDelay: 300,
+        highlight: true,
+        filterIgnoreCase: true,
+        fillOnTab: true,
+        showDropDown: true,
+        placeholder: ' '
+    });
 
-    // $("#category").multiselect({
-    //     header: true,
-    //     width: 466,
-    //     maxWidth: 466,
-    //     noneSelectedText: "Category"
-    // });
+    $('.seller-header__link').click(function() {
+        var checkElement = $(this).next();
+        checkElement.stop().animate({'height':'toggle'}, 0.1, 'linear');
+        if((checkElement.is('form')) && (checkElement.is(':visible'))) {
+            return false;
+        } else if ((checkElement.is('form')) && (checkElement.is(':hidden'))) {
+            return true;
+        }
+    });
 
-    // $("#attributes").multiselect({
-    //     header: true,
-    //     noneSelectedText: "Attributes"
-    // });
-
-    // $(".chosen-select").chosen({
-    // 	width: "100%",
-    // 	disable_search_threshold: 10
-    // });
-
-    // $('#selectState').scombobox({
-    //     filterDelay: 300,
-    //     highlight: true,
-    //     filterIgnoreCase: true,
-    //     fillOnTab: true,
-    //     showDropDown: true,
-    //     placeholder: ' '
-    // });
-
-    // $('#company').scombobox({
-    //     filterDelay: 300,
-    //     highlight: true,
-    //     filterIgnoreCase: true,
-    //     fillOnTab: true,
-    //     showDropDown: true,
-    //     placeholder: ' '
-    // });
-
-    // $('#individual').scombobox({
-    //     filterDelay: 300,
-    //     highlight: true,
-    //     filterIgnoreCase: true,
-    //     fillOnTab: true,
-    //     showDropDown: true,
-    //     placeholder: ' '
-    // });
-
-    // $('#self').scombobox({
-    //     filterDelay: 300,
-    //     highlight: true,
-    //     filterIgnoreCase: true,
-    //     fillOnTab: true,
-    //     showDropDown: true,
-    //     placeholder: ' '
-    // });
-
-    // $('#check').scombobox({
-    //     filterDelay: 300,
-    //     highlight: true,
-    //     filterIgnoreCase: true,
-    //     fillOnTab: true,
-    //     showDropDown: true,
-    //     placeholder: ' '
-    // });
-
-    // $('#Pal').scombobox({
-    //     filterDelay: 300,
-    //     highlight: true,
-    //     filterIgnoreCase: true,
-    //     fillOnTab: true,
-    //     showDropDown: true,
-    //     placeholder: ' '
-    // });
-
-    // $('#Bank').scombobox({
-    //     filterDelay: 300,
-    //     highlight: true,
-    //     filterIgnoreCase: true,
-    //     fillOnTab: true,
-    //     showDropDown: true,
-    //     placeholder: ' '
-    // });
-
-    // $('#selectStatePayment').scombobox({
-    //     filterDelay: 300,
-    //     highlight: true,
-    //     filterIgnoreCase: true,
-    //     fillOnTab: true,
-    //     showDropDown: true,
-    //     placeholder: ' '
-    // });
-
-    // $('#verifyState').scombobox({
-    //     filterDelay: 300,
-    //     highlight: true,
-    //     filterIgnoreCase: true,
-    //     fillOnTab: true,
-    //     showDropDown: true,
-    //     placeholder: ' '
-    // });
-
-    // $('#originTerm').scombobox({
-    //     filterDelay: 300,
-    //     highlight: true,
-    //     filterIgnoreCase: true,
-    //     fillOnTab: true,
-    //     showDropDown: true,
-    //     placeholder: ' '
-    // });
-
- //    $('select[name="payment"]').change(function(){
-    
- //    	var el = $(this).val();
- //   		if (el=='Chek') { 
- //          $('#paymentpaychek').css('display','block');
- //          $('#paymentpaypal').css('display','none');
- //          $('#paymentbank').css('display','none');
- //          $('#paymentindividual').css('display','none')
- //        }
- //    	else if (el=='PayPal') {
- //          $('#paymentpaychek').css('display','none');
- //          $('#paymentpaypal').css('display','block');
- //          $('#paymentbank').css('display','none');
- //          $('#paymentindividual').css('display','none')
- //        }
- //        else { 
- //          $('#paymentpaychek').css('display','none');
- //          $('#paymentpaypal').css('display','none');
- //          $('#paymentbank').css('display','block');
- //          $('#paymentindividual').css('display','none')
- //        }
-	// });
-
-	// $('select[name="company"]').change(function(){
-    
- //    	var el = $(this).val();
- //   		if (el=='Company') { 
- //          $('#paymentpaychek').css('display','none');
- //          $('#paymentpaypal').css('display','none');
- //          $('#paymentbank').css('display','block');
- //          $('#paymentindividual').css('display','none')
- //        }
- //    	else {
- //          $('#paymentpaychek').css('display','none');
- //          $('#paymentpaypal').css('display','none');
- //          $('#paymentbank').css('display','none');
- //          $('#paymentindividual').css('display','block')
- //        }
-	// });
-
-	// $(function() {
- //    	$("#datepicker").datepicker();
- // 	});
- 	// $(function() {
-  //   	$("#monthpicker").datepicker();
- 	// });
- 	// $(function() {
-  //   	$("#yearpicker").datepicker();
- 	// });
+    $(document).click( function(event){
+        if( $(event.target).closest("form").length )
+            return;
+        $(".registration").fadeOut("0.1");
+        event.stopPropagation();
+    });
 
     // CHANGE BACKGROUND COLOR
     $(document).mousemove(function (e) {

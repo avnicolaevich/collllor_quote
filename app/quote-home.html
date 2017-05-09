@@ -67,7 +67,7 @@
 							<input class="main__form-check hidden" type="radio" name="option" value="large-format" id="large-format">
 							<label class="main__form-radio" for="large-format">Large Format</label>
 
-							<input class="main__form-check hidden" type="radio" name="option" value="large-format" id="large-format">
+							<input class="main__form-check hidden" type="radio" name="option" value="large-format" id="design">
 							<label class="main__form-radio" for="large-format">Design</label>
 
 							<input class="main__form-check hidden" type="radio" name="option" value="3d" id="3d">
@@ -117,7 +117,7 @@
 						<div>
 							<button class="main__form-scanning" type="submit">
 							Find variants
-								<img class="main__form-sweep" src="img/paper-plane.svg">
+								<img class="main__form-sweep" src="img/paper-plane.svg" alt="plane">
 							</button>
 						</div>
 					</form>
@@ -146,24 +146,26 @@
 					<h2 class="quote__partition">Get a Print Estimate</h2>
 				</div>
 				<div class="col-xs-12">
-					<div class="quote__table">
-						<input class="quote__info" type="text"  placeholder="Category*" name="category" required autocomplete="off"/>
-						<input class="quote__info up" type="text"  placeholder="Name Your Project*" name="project" required autocomplete="off"/>
-						<textarea class="quote__sketch up" placeholder="Description*" name="description"  required></textarea>
-						<div class="quote__help">
-							<i class="icon-help quote__help-icon"></i>
-							<div class="quote__service">
-								<p class="quote__service-text">Mention If applicable: Material/paper weight # of Pages with/without the
+					<form action="#" method="post">
+						<div class="quote__table">
+							<input class="quote__info quote__info-bottom" type="text"  placeholder="Category*" name="category" required autocomplete="off"/>
+							<input class="quote__info quote__info-bottom" type="text"  placeholder="Name Your Project*" name="project" required autocomplete="off"/>
+							<textarea class="quote__sketch" placeholder="Description*" name="description"  required></textarea>
+							<div class="quote__help">
+								<i class="icon-help quote__help-icon"></i>
+								<div class="quote__service">
+									<p class="quote__service-text">Mention If applicable: Material/paper weight # of Pages with/without the
 									cover Print color, Print sides Folds, Lamination Type of binding Quantity</p>
+								</div>
 							</div>
+							<img class="quote__image" src="img/camera.png" alt="camera">
+							<input class="quote__info quote__info-bottom" type="text"  placeholder="Your Name*" name="name" required autocomplete="off"/>
+							<input class="quote__info quote__info-bottom" type="text"  placeholder="Where to Ship*" name="ship" required autocomplete="off"/>
+							<input class="quote__info quote__info-bottom" type="email"  placeholder="Email*" name="email" required autocomplete="off"/>
+							<input class="quote__info" type="tel"  placeholder="Phone*" name="phone" required autocomplete="off"/>
+							<button class="quote__button">send</button>
 						</div>
-						<img class="quote__image" src="img/camera.png" alt="camera">
-						<input class="quote__info" type="text"  placeholder="Your Name*" name="name" required autocomplete="off"/>
-						<input class="quote__info up" type="text"  placeholder="Where to Ship*" name="ship" required autocomplete="off"/>
-						<input class="quote__info up" type="email"  placeholder="Email*" name="email" required autocomplete="off"/>
-						<input class="quote__info up" type="tel"  placeholder="Phone*" name="phone" required autocomplete="off"/>
-						<a class="quote__button" href="javascript:void(0);">send</a>
-					</div>
+					</form>
 				</div>
 			</div>
 		</div>
