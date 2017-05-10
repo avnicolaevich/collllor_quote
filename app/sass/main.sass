@@ -4,9 +4,9 @@
 @import "vars"
 @import "fontello"
 @import "jquery-labelauty"
-// @import "chosen"
-// @import "jquery-multiselect"
-// @import "jquery-ui"
+@import "chosen"
+@import "jquery-multiselect"
+@import "jquery-ui"
 
 *
 	box-sizing: border-box
@@ -90,8 +90,15 @@ button
 .m0
 	margin: 0 !important
 
-// .up
-//     margin-top: -1px
+.hr
+    border-bottom: 1px solid rgb(211, 211, 211)
+
+.wrap
+    margin-top: -1px
+
+.last
+    margin-top: -1px
+    margin-bottom: 100px
 
 .img-responsive
 	display: block
@@ -135,6 +142,9 @@ textarea:required:focus
     box-shadow: 2px 2px 10px rgba(200, 0, 0, 0.85)
     outline: none
 
+input::-webkit-inner-spin-button 
+    -webkit-appearance: none
+    display: none
 // PRINT STYLES
 .header
     background: #fff
@@ -191,6 +201,8 @@ textarea:required:focus
 .header__form-btn
     font-size: .813em
     color: #f45748
+.icon-right-circle:before
+    content: '\e804'
 
 .header__link 
     line-height: 71px
@@ -251,6 +263,7 @@ textarea:required:focus
 
 .main__form-select 
     margin-top: 10px
+    margin-left: -3px
     display: inline-block
     text-align: left
     min-width: 200px
@@ -292,11 +305,9 @@ textarea:required:focus
 
 .scombobox
     position: relative
-    // margin-right: -3px
-
+    font-family: $helvetica_light
 .scombobox select
     display: none
-
 .scombobox-display
     color: rgb(102, 102, 102)
     width: 100%
@@ -1007,5 +1018,670 @@ input.labelauty + label
 		line-height: 1.5
 // SELLER_APP STYLES END
 
+// ACCOUNT STYLES
+/*Header styles*/
+.account-header
+    padding-top: 100px
+    &__heading
+        @include heading
+        margin-bottom: 30px 
+    &__inscription
+        color: rgba(0, 0, 0, .33)
+        text-transform: capitalize
+        padding-bottom: 10px
+    &__subheading
+        color: $subheading_color
+        font-family: $helvetica_bold
+        font-size: 1.438em
+        padding-bottom: 25px
+    &__photo
+        max-width: 202px
+        height: 170px
+        background-color: $photo_color
+    &__upload
+        display: block
+        font-family: $helvetica_bold
+        text-decoration: none
+        padding: 10px 10px 10px 18px
+        background: $photo_bg
+        color: $white
+        font-size: 1.25em
+        max-width: 202px
+        cursor: pointer
+        text-transform: lowercase
+        transition: .5s ease
+        margin-bottom: 25px
+        &:hover, &:active, &:focus
+            text-decoration: none
+            background: rgb(152, 152, 152)
+            color: #ffffff
+        &-info
+            max-width: 202px
+            color: rgb(134, 137, 135)
+            line-height: 24px
+        &-link
+            @include text_link
+    &__description
+        max-width: 500px
+        background: $white
+        height: auto
+        &-about
+            width: 100%
+        &-area
+            resize: vertical
+            margin: auto
+            font-size: 1.063em
+            display: block
+            width: 100%
+            height: 211px
+            padding: 15px 18px
+            border: 1px solid rgb(190, 189, 189)
+            color: $input_color
+            outline: none
+        &-text
+            text-align: right
+            padding-top: 10px
+            padding-bottom: 25px
+            font-size: 0.938em
+            color: $font_color
+        &-option
+            text-align: left
+            padding-bottom: 20px
+            color: $font_color
+        &-span
+            position: relative
+            top: -24px
+            left: 50px
+            color: $font_color
+        &-link
+            @include save_link
+            margin-bottom: 70px
+/*End header styles*/
+
+/*Capabilities styles*/
+.account-capabilities
+    padding-top: 30px
+    &__heading
+        @include heading
+        margin-bottom: 30px 
+    &__form
+        display: none
+    &__content
+        max-width: 500px
+    &__wrapper
+        width: 100%
+        position: relative
+    &__span
+        position: absolute
+        top: 24px
+        left: -140px
+        font-size: 1.063em
+        color: $font_color
+    &__text
+        padding-top: 30px
+        padding-bottom: 20px
+        color: $font_color
+        &-link
+            @include text_link
+    &__link
+        @include save_link
+        margin-bottom: 70px
+.ui-multiselect
+    max-width: 500px !important
+    width: 100% !important
+    &-icon-closethick:before
+        font-family: "fontello"
+        color: rgba(0, 0, 0, 0.4)
+        content: '\e801'
+        text-indent: 0
+        font-size: 1em
+    &-checkboxes label input
+        opacity: 0
+.ui-widget-header .ui-icon
+    background: none
+.ui-multiselect-checkboxes .ui-multiselect-optgroup a
+    display: inline-block
+.custom-checkbox
+    margin-right: -10px
+    &:before
+        font-family: "fontello"
+        color: rgba(0, 0, 0, 0.4)
+        content: '\e800'
+        opacity: 0
+        font-size: 1.125em
+    &--selected:before
+        opacity: 1
+    &--active
+        border: 1px solid #ccc
+        background: #ededed
+        font-weight: 400
+        color: #2b2b2b
+        outline: 0
+//font-size: 10px
+/*End of capabilities styles*/
+        
+/*Capabilities styles*/
+.account-contact
+    padding-top: 30px
+    &__heading
+        @include heading
+        margin-bottom: 20px 
+    &__subheading
+        max-width: 500px
+        color: $font_color
+        line-height: 20px
+        &-mail
+            font-family: $helvetica_bold
+            line-height: 26px
+            color: rgb(132, 127, 127)
+            padding-bottom: 20px
+    &__form
+        display: none
+    &__content
+        max-width: 500px
+    &__wrapper
+        width: 100%
+    &__info
+        @include account_info
+        &-firstname
+            display: inline-block
+            width: 50%
+            float: left
+            border-top: none
+            border-right: none
+            border-bottom: none
+        &-lastname
+            display: inline-block
+            border-top: none
+            border-bottom: none
+            width: 50%
+        &-email
+            border-bottom: none
+        &-phone
+            border-bottom: none
+        &-city
+            display: inline-block
+            width: 50%
+            float: left
+            border-top: none
+            border-right: none
+        &-zip
+            display: inline-block
+            border-top: none
+            width: 50%
+        &-service
+            border-top: none
+            margin-bottom: 30px
+    &__link
+        @include save_link
+        margin-bottom: 70px
+        margin-top: -20px
+    &__help
+        position: relative
+        top: -71px
+        left: 515px
+        width: 25px
+        height: 25px
+        background-color: rgb(17, 147, 154)
+        cursor: pointer
+        &-icon
+            color: $white
+            line-height: 25px
+            padding-left: 1px
+            cursor: pointer
+        &:hover .account-contact__service
+            visibility: visible
+            opacity: 1
+            @include transition
+    &__service
+        visibility: hidden
+        opacity: 0 
+        width: 230px
+        height: 100px
+        background-color: $white
+        color: $font_color
+        text-align: center
+        padding: 22px 10px
+        position: absolute
+        border: 1px solid #B1B1B1
+        z-index: 15
+        top: -16px
+        left: 102px
+        margin-left: -60px
+        &::after 
+            content: " "
+            position: absolute
+            bottom: 55%
+            left: 5%
+            margin-left: -42px
+            border-width: 15px
+            border-style: solid
+            border-color: transparent #B1B1B1 transparent transparent
+            transform: rotateX( 180deg )
+/*End of capabilities styles*/
+
+/*Password styles*/
+.account-password
+    padding-top: 30px
+    &__heading
+        @include heading
+        margin-bottom: 40px 
+    &__form
+        display: none
+    &__content
+        max-width: 500px
+    &__wrapper
+        width: 100%
+    &__info
+        @include account_info
+        &-old
+            border-bottom: none
+        &-new
+            border-bottom: none
+    &__link
+        @include save_link
+        margin-top: 20px
+        margin-bottom: 70px
+/*End of password styles*/
+
+/*Payment styles*/
+.account-payment
+    padding-top: 30px
+    &__heading
+        @include heading
+        margin-bottom: 20px 
+    &__subheading
+        max-width: 500px
+        color: $font_color
+        padding-bottom: 35px
+        line-height: 20px
+        &-link
+            @include text_link
+    &__form
+        display: none
+        height: 650px
+        max-width: 500px
+        position: relative
+    &__content
+        // width: 100%
+    &__paypal
+        display: none
+        // position: absolute
+        width: 100%
+    &__bank
+        display: none
+        // position: absolute   
+        width: 100% 
+    &__individual
+        display: none
+        // position: absolute
+        width: 100%
+    &__wrapper
+        // width: 100%
+    &__info
+        @include account_info
+        &-check
+            border-top: none
+        &-mail1
+            border-top: none
+        &-payaddress
+            border-top: none
+        &-address
+            border-top: none
+            border-bottom: none
+        &-city
+            display: inline-block
+            width: 50%
+            float: left
+            border-right: none
+            border-top: none
+        &-zip
+            display: inline-block
+            border-top: none
+            width: 50%
+        &-day
+            display: inline-block
+            float: left
+            border-right: none
+            width: 33.3%
+            border-bottom: none
+            border-top: none
+        &-month
+            display: inline-block
+            border-right: none
+            width: 33.4%
+            float: left
+            border-bottom: none
+            border-top: none
+        &-year
+            display: inline-block
+            width: 33.3%
+            border-bottom: none
+            border-top: none
+        &-rnumber
+            border-top: none
+        &-anumber
+            border-top: none
+        &-ein
+            border-top: none
+        &-routing
+            border-bottom: none
+        &-account
+            border-bottom: none
+    &__agree
+        padding-top: 25px
+        padding-bottom: 13px
+    &__accept
+        padding-top: 0
+        padding-bottom: 0
+    &__text
+        display: inline-block
+        color: $font_color
+        position: relative
+        top: -24px
+        left: 50px
+        &-link
+            @include text_link
+    &__help
+        position: relative
+        top: -178px
+        left: 515px
+        width: 25px
+        height: 25px
+        background-color: rgb(17, 147, 154)
+        cursor: pointer
+        &-icon
+            color: $white
+            line-height: 25px
+            padding-left: 1px
+            cursor: pointer
+        &:hover .account-payment__service-img, &:hover .account-payment__service 
+            visibility: visible
+            opacity: 1
+            @include transition
+    &__service
+        visibility: hidden
+        opacity: 0
+        position: absolute
+        padding: 15px 
+        background: $white
+        top: -48px
+        left: 101px
+        margin-left: -60px
+        border: 1px solid #B1B1B1
+        z-index: 16
+        width: 350px
+        height: 180px
+        &-img
+            visibility: hidden
+            opacity: 0
+            width: 334px
+            height: 167px
+            background-image: url("../img/credit-card.jpg")
+            background-size: cover
+            padding: 22px 14px
+            position: absolute          
+            top: 5px
+            left: 68px
+            margin-left: -60px
+            &::after 
+                content: " "
+                position: absolute
+                bottom: 58%
+                left: 1%
+                margin-left: -42px
+                border-width: 15px
+                border-style: solid
+                border-color: transparent #B1B1B1 transparent transparent
+                transform: rotateX( 180deg )
+    &__link
+        @include save_link
+        margin-top: 20px
+        margin-bottom: 70px
+/*End of payment styles*/
+
+/*Verify styles*/
+.account-verify
+    padding-top: 30px
+    &__heading
+        @include heading
+        margin-bottom: 20px 
+    &__form
+        display: none
+    &__content
+        max-width: 500px
+    &__wrapper
+        width: 100%
+        &-origin
+            width: 50%
+            display: inline-block
+    &__percent
+        display: inline-block
+        width: 50%
+        float: left
+        border-top: none
+        border-right: none
+        font-size: 1.063em
+        height: 54px
+        padding: 20px 18px
+        border-left: 1px solid #B1B1B1
+        border-bottom: 1px solid #B1B1B1
+        color: $input_color
+        transition: border-color .25s ease, box-shadow .25s ease
+        &:focus
+            outline: none   
+    &__origin
+        display: inline-block
+        width: 50%
+        font-size: 1.063em
+        height: 52px
+        padding: 0 18px
+        border: 1px solid #B1B1B1
+        color: $input_color
+        transition: border-color .25s ease, box-shadow .25s ease
+        &:focus
+            outline: none
+    &__help
+        position: relative
+        top: -40px
+        left: 515px
+        width: 25px
+        height: 25px
+        background-color: rgb(17, 147, 154)
+        cursor: pointer
+        &-icon
+            color: $white
+            line-height: 25px
+            padding-left: 1px
+            cursor: pointer
+        &:hover .account-verify__service
+            visibility: visible
+            opacity: 1
+            @include transition
+    &__service
+        visibility: hidden
+        opacity: 0
+        width: 230px
+        height: 170px
+        background-color: $white
+        color: $font_color
+        text-align: left
+        padding: 22px 14px
+        position: absolute
+        border: 1px solid #B1B1B1
+        z-index: 15
+        top: -48px
+        left: 101px
+        margin-left: -60px
+        &::after 
+            content: " "
+            position: absolute
+            bottom: 55%
+            left: 5%
+            margin-left: -42px
+            border-width: 15px
+            border-style: solid
+            border-color: transparent #B1B1B1 transparent transparent
+            transform: rotateX( 180deg )
+        &-span
+            font-family: $helvetica_bold
+    &__link
+        @include save_link
+        margin-top: 20px
+        margin-bottom: 70px
+/*End of verify styles*/
+
+// COMBOBOX STYLES
+.account .scombobox
+    position: relative
+    font-family: $helvetica_light
+.account .scombobox select
+    display: none
+.account .scombobox-display
+    color: rgba(0, 0, 0, .6)
+    width: 100%
+    height: 58px
+    padding: 18px 18px
+    font-size: 1.063em
+    border: 1px solid #b1b1b1
+    box-sizing: border-box
+.account .scombobox-display:focus
+    border: 1px solid #ff8e40 
+    outline: 0
+.account .scombobox-display:disabled
+    background: #f0f0f0
+.account .scombobox-display.scombobox-invalid
+    background: #ededed
+    color: #2b2b2b
+.account .scombobox-display-div
+    border: 1px solid #ccc
+    cursor: pointer
+.account .scombobox-display-div-holder
+    padding: 2px
+    margin-left: 5px
+.account .scombobox-display-div-item
+    border: 1px solid #ccc
+    margin: 2px
+    float: left
+    height: 40%
+    max-width: 200px
+    padding: 4px 18px 4px 8px
+    position: relative
+    vertical-align: middle
+    white-space: nowrap
+    overflow: hidden
+    cursor: default
+    background: #f8f8f8
+    display: none
+.account .scombobox-display-div-item-text
+    width: 200px
+    overflow: hidden
+.account .scombobox-display-div-item-remove
+    position: absolute
+    right: -1px
+    top: 5px
+    margin-right: 10px
+    background: #a0a0a0
+    border-radius: 100px
+    color: #fff
+    cursor: pointer
+    line-height: 87%
+    padding: 1px 3px 2px
+.account .scombobox-display-div-item-remove:hover
+    background: $button
+.account .scombobox-display-div-item-remove:active
+    background: $button
+#verifyState .scombobox-list
+    width: 100%
+    bottom: 100%
+    border: 1px solid #ff8e40
+    border-top: 1px solid #ff8e40
+    max-height: 250px
+.account .scombobox-list
+    color: rgba(0, 0, 0, .6)
+    display: none
+    position: absolute
+    max-height: 250px
+    min-width: 100%
+    max-width: 300%
+    white-space: nowrap
+    box-sizing: border-box
+    overflow-y: auto
+    background: #fff
+    border: 1px solid #ff8e40
+    border-top: 1px solid transparent
+    box-shadow: 0 0 3px #ccc
+    z-index: 10
+.account .scombobox-list p
+    text-align: left
+    cursor: pointer
+    margin: 0
+    padding: 20px
+.account .scombobox-list p input[type="checkbox"]
+    margin-right: 18px
+    vertical-align: middle
+.account .scombobox-list p.scombobox-hovered,
+.account .scombobox-list p:hover
+    background-color: #f2f2f2
+.account .scombobox-list p.scombobox-separator
+    height: 2px
+    padding: 0
+    cursor: default
+    background: #eee
+.account .scombobox-list p.scombobox-header
+    cursor: default
+    background: #eee
+    font-size: 1.063em
+    font-family: $helvetica_bold
+    color: $button
+.account .scombobox-dropdown-arrow
+    position: absolute
+    top: 20px
+    right: 0
+    width: 20px
+    height: 20px
+    /* background size: 4 Kb */
+    background: url("../img/ui-icons_444444_256x240.png") -65px -16px
+    opacity: 0.5
+    z-index: 1
+    cursor: pointer
+.account .scombobox-dropdown-arrow:hover
+    opacity: 1
+.account .scombobox-dropdown-arrow-up:focus
+    border: 1px solid #ff8e40
+.account .scombobox-dropdown-arrow-up
+    background: url("../img/ui-icons_444444_256x240.png") -65px -16px
+.account .scombobox-dropdown-background
+    position: absolute
+    top: 1px
+    right: 1px
+    width: 20px
+    height: 56px
+    background: #fff
+    // border: 2px solid #b1b1b1
+    border-left: none
+    box-sizing: border-box
+.account .scombobox-display:focus .scombobox-dropdown-background:focus
+    outline: 0
+    border: 1px solid #ff8e40
+    border-left: none
+.account .scombobox-dropdown-background-invalid
+    border-left: 1px solid #ccc
+.account .scombobox-marker
+    background: rgb(17, 147, 154)
+    color: white
+    border-radius: 2px
+    padding: 0 2px
+    margin: 0 2px
+.account .scombobox input[type="checkbox"]
+    cursor: pointer
+.account .scombobox-disabled .scombobox-dropdown-arrow,
+.account .scombobox-disabled .scombobox-dropdown-background
+    display: none
+.account .scombobox-disabled .scombobox-display-div
+    background: #f8f8f8
+    cursor: default
+// COMBOBOX STYLES END
+// ACCOUNT STYLES END
 
 @import "media" // Всегда в конце

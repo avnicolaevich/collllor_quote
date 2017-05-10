@@ -29,6 +29,18 @@
         right: -1vw
     .seller-header__heading
         padding-bottom: 80px
+    .account-payment__help
+        left: 515px
+    .account-payment__service
+        width: 240px
+        height: 155px
+        top: -35px
+        left: 101px
+    .account-payment__service-img
+        width: 220px
+        height: 140px
+        top: 5px
+        left: 69px
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
     /**/
@@ -70,39 +82,57 @@
         text-align: center
     .seller-selling__text
         text-align: center
+    .account-header__heading
+        text-align: center
+    .account-header__upload
+        font-size: 1em
+        padding: 10px 10px 10px 12px
+    .account-payment__info-day
+        width: 33.3%
+    .account-payment__info-year
+        width: 33.3%
+        margin-bottom: -1px
+    .account-verify__link
+        margin-top: 30px
+        margin-bottom: 70px
+    .account-contact__link
+        margin-top: 30px
+    .account-password__link
+        margin-top: 30px
+    .account-payment__link
+        margin-top: 30px    
+    .account-contact__help
+        display: none
+    .account-verify__help
+        display: none   
+    .account-payment__help
+        display: none
+    .account-payment__info-ssn
+        margin-bottom: 20px
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
     /**/
     body
         font-size: 14px
-
     .header__form
         width: 73%
-
     .header__form-label
         display: none
-
     .header__form-mail
         left: 40px
-
     .header__form-subscribe 
         display: inline-block
         font-size: 1.375em
-
     .header__form-input
         padding-left: 30px
         width: 28px
         transition: width .4s ease-in-out
-
     .header__form-input:focus 
         width: 100%
-
     .header__form-button 
         display: none
-
     .header__link
         margin-left: 0
-
     .main
         margin-top: 10vh
 
@@ -170,8 +200,37 @@
         padding-bottom: 30px
     #selectState .scombobox-display
         width: 82.5%
+    .account-header__inscription
+        // text-align: center
+    .account-header__subheading
+        // text-align: center
+    .account-header__photo
+        // margin: auto
+    .account-header__upload
+        // margin: auto
+        padding: 10px 10px 10px 30px
+        margin-bottom: 10px
+    .account-header__upload-info
+        // margin: auto
+        margin-bottom: 20px
+    .account-header__description
+        // margin: auto
+    .account-scombobox-dropdown-background
+        height: 53px
+    .account-capabilities__span
+        display: none
+    .account-payment__info-day
+        width: 33.3%    
+    .account-payment__info-year
+        width: 33.3%
+    #selectStateAccount,
+    #check, #selectStatePayment,
+    #company, #verifyState
+        width: 99.9%
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
+    body
+        font-size: 12px
     .print
         font-size: 12px
     .margin25
@@ -202,7 +261,8 @@
         width: 41.7%
     .seller-header__info-city
         width: 41.7%
-
+    .account .scombobox-dropdown-background
+        height: 51px
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)
 	/**/

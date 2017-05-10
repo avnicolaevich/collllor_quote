@@ -60,16 +60,16 @@ $black: rgb(0, 0, 0)
 	&:-ms-input-placeholder
 		color: #c0d3cd
 
-// @mixin heading
-// 	display: inline-block
-// 	font-family: $helvetica_light
-// 	font-size: 2.25em
-// 	color: $heading_color
-// 	text-transform: capitalize
-// 	letter-spacing: 1px
-// 	&:active, &:focus, &:hover
-// 		text-decoration: none
-// 		color: rgb(161, 161, 161)
+@mixin heading
+	display: inline-block
+	font-family: $helvetica_light
+	font-size: 2.25em
+	color: $heading_color
+	text-transform: capitalize
+	letter-spacing: 1px
+	&:active, &:focus, &:hover
+		text-decoration: none
+		color: rgb(161, 161, 161)
 
 @mixin text_link
 	cursor: pointer
@@ -105,6 +105,18 @@ $black: rgb(0, 0, 0)
 	padding: 20px 18px
 	border: 1px solid #B1B1B1
 	color: $input_color
+	transition: border-color .25s ease, box-shadow .25s ease
+	&:focus
+		outline: none
+
+@mixin account_info
+	display: block
+	font-size: 1.063em
+	width: 100%
+	height: 55px
+	padding: 20px 18px
+	border: 1px solid #B1B1B1
+	color: #B1B1B1
 	transition: border-color .25s ease, box-shadow .25s ease
 	&:focus
 		outline: none
